@@ -4,34 +4,10 @@ using DataFrames: DataFrame, groupby
 using AcuteML: UN, parsehtml, root, nextelement, nodecontent
 using MLStyle: @match
 using Pseudopotentials:
-    CoreHoleEffect,
-    ExchangeCorrelationFunctional,
-    CoreValenceInteraction,
-    Pseudization,
-    PerdewZunger,
-    VoskoWilkNusair,
-    PerdewBurkeErnzerhof,
-    PerdewBurkeErnzerhofRevisedForSolids,
-    BeckeLeeYangParr,
-    PerdewWang91,
-    TaoPerdewStaroverovScuseria,
-    Coulomb,
-    KresseJoubert,
-    Blöchl,
-    TroullierMartins,
-    BacheletHamannSchlüter,
-    VonBarthCar,
-    Vanderbilt,
-    AllElectron,
-    RappeRabeKaxirasJoannopoulos,
-    RappeRabeKaxirasJoannopoulosUltrasoft,
-    SemicoreValence,
-    CoreValence,
-    NonLinearCoreCorrection,
-    LinearCoreCorrection
+    CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
 using REPL.TerminalMenus: RadioMenu, request
 
-using ..UnifiedPseudopotentialFormat: PseudopotentialName
+using ..UnifiedPseudopotentialFormat: UPFFileName
 
 export list_elements, list_potentials, download_potentials
 
@@ -135,12 +111,11 @@ const ELEMENTS = (
 )
 const DATABASE = DataFrame(
     element = [],
-    fullrelativistic = Bool[],
-    corehole = UN{CoreHoleEffect}[],
-    functional = UN{ExchangeCorrelationFunctional}[],
-    corevalence = UN{Vector{<:CoreValenceInteraction}}[],
+    rel = Bool[],
+    corehole = UN{CoreHole}[],
+    xc = UN{ExchangeCorrelationFunctional}[],
+    cv = UN{Vector{<:ValenceCoreState}}[],
     pseudization = UN{Pseudization}[],
-    free = String[],
     src = String[],
 )
 const PERIODIC_TABLE = raw"""
@@ -154,75 +129,6 @@ Fr Ra
       La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu
       Ac Th Pa U  Np Pu
 """
-const PSEUDOPOTENTIAL_NAME =
-    r"(?:(rel)-)?([^-]*-)?(?:(pz|vwn|pbe|pbesol|blyp|pw91|tpss|coulomb)-)(?:([spdfnl]*)-)?(ae|mt|bhs|vbc|van|rrkjus|rrkj|kjpaw|bpaw)(?:_(.*))?"i  # spdfnl?
-
-function Base.parse(::Type{PseudopotentialName}, name)
-    prefix, extension = splitext(name)
-    @assert uppercase(extension) == ".UPF"
-    data = split(prefix, '.'; limit = 2)
-    if length(data) == 2
-        element, description = data
-        m = match(PSEUDOPOTENTIAL_NAME, description)
-        if m !== nothing
-            fullrelativistic = m[1] !== nothing ? true : false
-            corehole = m[2] !== nothing ? nothing : nothing
-            functional = @match m[3] begin
-                "pz" => PerdewZunger()
-                "vwn" => VoskoWilkNusair()
-                "pbe" => PerdewBurkeErnzerhof()
-                "pbesol" => PerdewBurkeErnzerhofRevisedForSolids()
-                "blyp" => BeckeLeeYangParr()
-                "pw91" => PerdewWang91()
-                "tpss" => TaoPerdewStaroverovScuseria()
-                "coulomb" => Coulomb()
-            end
-            corevalence = if m[4] !== nothing
-                map(collect(m[4])) do c
-                    @match c begin
-                        's' || 'p' || 'd' => SemicoreValence(c)
-                        'f' => CoreValence('f')
-                        'n' => NonLinearCoreCorrection()
-                        'l' => LinearCoreCorrection()
-                    end
-                end
-            end
-            pseudization = @match m[5] begin
-                "ae" => AllElectron()
-                "mt" => TroullierMartins()
-                "bhs" => BacheletHamannSchlüter()
-                "vbc" => VonBarthCar()
-                "van" => Vanderbilt()
-                "rrkj" => RappeRabeKaxirasJoannopoulos()
-                "rrkjus" => RappeRabeKaxirasJoannopoulosUltrasoft()
-                "kjpaw" => KresseJoubert()
-                "bpaw" => Blöchl()
-            end
-            free = m[6]
-        else
-            throw(
-                Meta.ParseError(
-                    "parsing failed! The file name `$name` does not follow QE's naming convention!",
-                ),
-            )
-        end
-        return PseudopotentialName(
-            element,
-            fullrelativistic,
-            corehole,
-            functional,
-            corevalence,
-            pseudization,
-            free,
-        )
-    else
-        throw(
-            Meta.ParseError(
-                "parsing failed! The file name `$name` does not follow QE's naming convention!",
-            ),
-        )
-    end
-end
 
 function _parsehtml(element)
     url = LIBRARY_ROOT * element
@@ -261,7 +167,7 @@ function list_potentials(element::Union{AbstractString,AbstractChar})
     element = lowercase(string(element))
     @assert element in ELEMENTS "element $element is not recognized!"
     for meta in _parsehtml(element)
-        parsed = parse(PseudopotentialName, meta.name)
+        parsed = parse(UPFFileName, meta.name)
         push!(DATABASE, [fieldvalues(parsed)..., meta.src])
     end
     return list_elements(false)[(uppercasefirst(element),)]
@@ -297,47 +203,9 @@ function download_potentials(element)
     return paths
 end
 
-fieldvalues(x::PseudopotentialName) = (getfield(x, i) for i in 1:nfields(x))
-
-function Base.string(x::PseudopotentialName)
-    arr = String[]
-    if x.fullrelativistic
-        push!(arr, "rel")
-    end
-    if x.corehole !== nothing
-        push!(arr, string(x.corehole))
-    end
-    push!(arr, @match x.functional begin
-        ::PerdewZunger => "pz"
-        ::VoskoWilkNusair => "vwn"
-        ::PerdewBurkeErnzerhof => "pbe"
-        ::PerdewBurkeErnzerhofRevisedForSolids => "pbesol"
-        ::BeckeLeeYangParr => "blyp"
-        ::PerdewWang91 => "pw91"
-        ::TaoPerdewStaroverovScuseria => "tpss"
-        ::Coulomb => "coulomb"
-    end)
-    if x.corevalence !== nothing
-        push!(arr, join(map(x.corevalence) do c
-            @match c begin
-                c::Union{SemicoreValence,CoreValence} => string(c.orbital)
-                ::NonLinearCoreCorrection => 'n'
-            end
-        end))
-    end
-    push!(arr, @match x.pseudization begin
-        ::TroullierMartins => "mt"
-        ::BacheletHamannSchlüter => "bhs"
-        ::VonBarthCar => "vbc"
-        ::Vanderbilt => "van"
-        ::RappeRabeKaxirasJoannopoulos => "rrkj"
-        ::RappeRabeKaxirasJoannopoulosUltrasoft => "rrkjus"
-        ::KresseJoubert => "kjpaw"
-        ::Blöchl => "bpaw"
-        ::AllElectron => "ae"
-    end)
-    prefix = x.element * '.' * join(arr, '-') * '_' * x.free
-    return prefix * ".UPF"
-end
+fieldvalues(x::UPFFileName) = (
+    getfield(x, i) for
+    i in (:element, :fullrelativistic, :corehole, :xc, :valencecore, :pseudization)
+)
 
 end

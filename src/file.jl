@@ -11,7 +11,7 @@ using AcuteML:
     @txt_str
 using Pseudopotentials: PseudopotentialFormat
 
-export UpfContent, UPF, getdata
+export UPF, getdata
 
 istrue(str) = occursin(r"t(rue)?"i, str)
 
@@ -196,7 +196,7 @@ end
     aewfc::Vector{Aewfc}, "PP_AEWFC"
 end
 
-@aml struct UpfContent <: PseudopotentialFormat doc"UPF"
+@aml struct UPF <: PseudopotentialFormat doc"UPF"
     version::VersionNumber, att"version"
     info::Info, "PP_INFO"
     header::Header, "PP_HEADER"
@@ -210,8 +210,6 @@ end
     rhoatom::Rhoatom, "PP_RHOATOM"
     # paw::UN{Paw}, "PP_PAW"
 end
-
-const UPF = UpfContent
 
 function validate(x::Mesh)
     r, rab = getdata.((x.r, x.rab))
@@ -228,23 +226,23 @@ function fixenumeration!(doc, name)
     return doc
 end
 
-function Base.parse(::Type{UpfContent}, str)
+function Base.parse(::Type{UPF}, str)
     doc = parsexml(str)
     fixenumeration!(doc, "PP_CHI")
     fixenumeration!(doc, "PP_BETA")
     fixenumeration!(doc, "PP_AEWFC")
     fixenumeration!(doc, "PP_QIJL")
-    return UpfContent(doc)
+    return UPF(doc)
 end
 
 # Idea from https://github.com/JuliaData/CSV.jl/blob/c3af297/src/CSV.jl#L64-L69
-function Base.read(io::IO, ::Type{UpfContent})
+function Base.read(io::IO, ::Type{UPF})
     str = read(io, String)
-    return parse(UpfContent, str)
+    return parse(UPF, str)
 end
-function Base.read(filename::AbstractString, ::Type{UpfContent})
+function Base.read(filename::AbstractString, ::Type{UPF})
     str = read(filename, String)
-    return parse(UpfContent, str)
+    return parse(UPF, str)
 end
 
 getdata(x::Union{Rhoatom,Nlcc,Local,R,Rab,Chi,Beta,Dij,Q,Multipoles,Qijl}) = parsevec(x.text)
@@ -267,7 +265,7 @@ function Base.getproperty(x::Header, name::Symbol)
 end
 
 # From https://github.com/mauro3/Parameters.jl/blob/ecbf8df/src/Parameters.jl#L554-L561
-function Base.show(io::IO, x::UpfContent)
+function Base.show(io::IO, x::UPF)
     if get(io, :compact, false) || get(io, :typeinfo, nothing) == typeof(x)
         Base.show_default(IOContext(io, :limit => true), x)
     else
