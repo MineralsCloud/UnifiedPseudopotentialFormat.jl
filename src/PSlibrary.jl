@@ -111,12 +111,11 @@ const ELEMENTS = (
 )
 const DATABASE = DataFrame(
     element = [],
-    fullrelativistic = Bool[],
+    rel = Bool[],
     corehole = UN{CoreHole}[],
     xc = UN{ExchangeCorrelationFunctional}[],
     cv = UN{Vector{<:ValenceCoreState}}[],
     pseudization = UN{Pseudization}[],
-    free = String[],
     src = String[],
 )
 const PERIODIC_TABLE = raw"""
@@ -204,6 +203,9 @@ function download_potentials(element)
     return paths
 end
 
-fieldvalues(x::UPFFileName) = (getfield(x, i) for i in 1:nfields(x))
+fieldvalues(x::UPFFileName) = (
+    getfield(x, i) for
+    i in (:element, :fullrelativistic, :corehole, :xc, :corevalence, :pseudization)
+)
 
 end
