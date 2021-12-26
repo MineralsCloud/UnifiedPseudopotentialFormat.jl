@@ -117,6 +117,7 @@ const DATABASE = DataFrame(
     cv = UN{Vector{<:ValenceCoreState}}[],
     pseudization = UN{Pseudization}[],
     src = String[],
+    name = String[],
 )
 const PERIODIC_TABLE = raw"""
 H                                                  He
@@ -168,7 +169,7 @@ function list_potentials(element::Union{AbstractString,AbstractChar})
     @assert element in ELEMENTS "element $element is not recognized!"
     for meta in _parsehtml(element)
         parsed = parse(UPFFileName, meta.name)
-        push!(DATABASE, [fieldvalues(parsed)..., meta.src])
+        push!(DATABASE, [fieldvalues(parsed)..., meta.src, meta.name])
     end
     return list_elements(false)[(uppercasefirst(element),)]
 end
