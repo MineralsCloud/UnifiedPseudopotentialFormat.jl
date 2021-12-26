@@ -1,0 +1,13 @@
+name = "UnifiedPseudopotentialFormat"
+uuid = "8030dd95-f9ed-4dd5-b230-99ba15524fc3"
+authors = ["Reno <singularitti@outlook.com>"]
+version = "0.1.0"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+julia = "1"
+
+[targets]
+test = ["Test"]
