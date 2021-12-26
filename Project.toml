@@ -5,6 +5,7 @@ version = "0.1.0"
 
 [deps]
 AcuteML = "6b84a0a3-a11a-41fa-a417-e600528de108"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 Pseudopotentials = "1b2dc2e6-48aa-4f00-b8f4-19d1a71d7a0e"
 
 [compat]
