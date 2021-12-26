@@ -9,7 +9,8 @@ using REPL.TerminalMenus: RadioMenu, request
 
 using ..UnifiedPseudopotentialFormat: UPFFileName
 
-export list_elements, list_potentials, download_potentials
+export list_elements,
+    list_potentials, download_potentials, download_potential, search_potential
 
 const LIBRARY_ROOT = "https://www.quantum-espresso.org/pseudopotentials/ps-library/"
 const UPF_ROOT = "https://www.quantum-espresso.org"
@@ -202,6 +203,23 @@ function download_potentials(element)
         finished = request("Finished?", RadioMenu(["yes", "no"])) == 1
     end
     return paths
+end
+
+function search_potential(name::AbstractString)
+    x = parse(UPFFileName, name)
+    db = list_potentials(x.element)
+    return name in db.name
+end
+
+function download_potential(name::AbstractString, path)
+    x = parse(UPFFileName, name)
+    df = list_potentials(x.element)
+    if name in df.name
+        i = findfirst(==(name), df.name)
+        download(df.src[i], path)
+    else
+        throw("potential '$name' is not in the database!")
+    end
 end
 
 fieldvalues(x::UPFFileName) = (
