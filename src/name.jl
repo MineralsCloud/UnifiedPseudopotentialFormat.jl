@@ -32,15 +32,24 @@ export UPFFileName
 const PSEUDOPOTENTIAL_NAME =
     r"(?:(rel)-)?([^-]*-)?(?:(pz|vwn|pbe|pbesol|blyp|pw91|tpss|coulomb)-)(?:([spdfn]*)l?-)?(ae|mt|bhs|vbc|van|rrkjus|rrkj|kjpaw|bpaw)(?:_(.*))?"i  # spdfnl?
 
-@with_kw mutable struct UPFFileName
+mutable struct UPFFileName
     element::String
     fullrelativistic::Bool
-    corehole::UN{CoreHole} = nothing
+    corehole::UN{CoreHole}
     xc::ExchangeCorrelationFunctional
-    valencecore::UN{Vector{<:ValenceCoreState}} = nothing
+    valencecore::UN{Vector{<:ValenceCoreState}}
     pseudization::Pseudization
-    free::String = ""
+    free::String
 end
+UPFFileName(;
+    element,
+    fullrelativistic = false,
+    corehole = nothing,
+    xc,
+    valencecore = nothing,
+    pseudization,
+    free = "",
+) = UPFFileName(element, fullrelativistic, corehole, xc, valencecore, pseudization, free)
 
 function Base.parse(::Type{UPFFileName}, name)
     prefix, extension = splitext(name)
