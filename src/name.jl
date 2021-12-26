@@ -93,7 +93,7 @@ function Base.parse(::Type{UPFFileName}, name)
             free = m[6]
         else
             throw(
-                Meta.ParseError(
+                ArgumentError(
                     "parsing failed! The file name `$name` does not follow QE's naming convention!",
                 ),
             )
@@ -109,7 +109,7 @@ function Base.parse(::Type{UPFFileName}, name)
         )
     else
         throw(
-            Meta.ParseError(
+            ArgumentError(
                 "parsing failed! The file name `$name` does not follow QE's naming convention!",
             ),
         )
