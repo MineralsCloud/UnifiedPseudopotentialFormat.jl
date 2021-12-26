@@ -2,9 +2,9 @@ using AcuteML: UN
 using MLStyle: @match
 using Parameters: @with_kw
 using Pseudopotentials:
-    CoreHoleEffect,
+    CoreHole,
     ExchangeCorrelationFunctional,
-    CoreValenceInteraction,
+    ValenceCoreState,
     Pseudization,
     PerdewZunger,
     VoskoWilkNusair,
@@ -23,10 +23,9 @@ using Pseudopotentials:
     AllElectron,
     RappeRabeKaxirasJoannopoulos,
     RappeRabeKaxirasJoannopoulosUltrasoft,
-    SemicoreValence,
-    CoreValence,
-    NonLinearCoreCorrection,
-    LinearCoreCorrection
+    SemicoreState,
+    CoreState,
+    NonLinearCoreCorrection
 
 const PSEUDOPOTENTIAL_NAME =
     r"(?:(rel)-)?([^-]*-)?(?:(pz|vwn|pbe|pbesol|blyp|pw91|tpss|coulomb)-)(?:([spdfn]*)l?-)?(ae|mt|bhs|vbc|van|rrkjus|rrkj|kjpaw|bpaw)(?:_(.*))?"i  # spdfnl?
@@ -34,9 +33,9 @@ const PSEUDOPOTENTIAL_NAME =
 @with_kw mutable struct UPFFileName
     element::String
     fullrelativistic::Bool
-    corehole::UN{CoreHoleEffect} = nothing
+    corehole::UN{CoreHole} = nothing
     xc::ExchangeCorrelationFunctional
-    corevalence::UN{Vector{<:CoreValenceInteraction}} = nothing
+    corevalence::UN{Vector{<:ValenceCoreState}} = nothing
     pseudization::Pseudization
     free::String = ""
 end
@@ -64,10 +63,9 @@ function Base.parse(::Type{UPFFileName}, name)
             corevalence = if m[4] !== nothing
                 map(collect(m[4])) do c
                     @match c begin
-                        's' || 'p' || 'd' => SemicoreValence(c)
-                        'f' => CoreValence('f')
+                        's' || 'p' || 'd' => SemicoreState(c)
+                        'f' => CoreState('f')
                         'n' => NonLinearCoreCorrection()
-                        'l' => LinearCoreCorrection()
                     end
                 end
             end
@@ -129,7 +127,7 @@ function Base.string(x::UPFFileName)
     if x.corevalence !== nothing
         push!(arr, join(map(x.corevalence) do c
             @match c begin
-                c::Union{SemicoreValence,CoreValence} => string(c.orbital)
+                c::Union{SemicoreState,CoreState} => string(c.orbital)
                 ::NonLinearCoreCorrection => 'n'
             end
         end))
