@@ -6,7 +6,7 @@ using Pseudopotentials: CoreHoleEffect, ExchangeCorrelationFunctional, CoreValen
     element::String
     fullrelativistic::Bool
     corehole::UN{CoreHoleEffect} = nothing
-    functional::ExchangeCorrelationFunctional
+    xc::ExchangeCorrelationFunctional
     corevalence::UN{Vector{<:CoreValenceInteraction}} = nothing
     pseudization::Pseudization
     free::String = ""

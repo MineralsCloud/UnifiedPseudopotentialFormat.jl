@@ -137,7 +137,7 @@ const DATABASE = DataFrame(
     element = [],
     fullrelativistic = Bool[],
     corehole = UN{CoreHoleEffect}[],
-    functional = UN{ExchangeCorrelationFunctional}[],
+    xc = UN{ExchangeCorrelationFunctional}[],
     corevalence = UN{Vector{<:CoreValenceInteraction}}[],
     pseudization = UN{Pseudization}[],
     free = String[],
@@ -167,7 +167,7 @@ function Base.parse(::Type{PseudopotentialName}, name)
         if m !== nothing
             fullrelativistic = m[1] !== nothing ? true : false
             corehole = m[2] !== nothing ? nothing : nothing
-            functional = @match m[3] begin
+            xc = @match m[3] begin
                 "pz" => PerdewZunger()
                 "vwn" => VoskoWilkNusair()
                 "pbe" => PerdewBurkeErnzerhof()
@@ -210,7 +210,7 @@ function Base.parse(::Type{PseudopotentialName}, name)
             element,
             fullrelativistic,
             corehole,
-            functional,
+            xc,
             corevalence,
             pseudization,
             free,
@@ -307,7 +307,7 @@ function Base.string(x::PseudopotentialName)
     if x.corehole !== nothing
         push!(arr, string(x.corehole))
     end
-    push!(arr, @match x.functional begin
+    push!(arr, @match x.xc begin
         ::PerdewZunger => "pz"
         ::VoskoWilkNusair => "vwn"
         ::PerdewBurkeErnzerhof => "pbe"
