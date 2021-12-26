@@ -4,7 +4,7 @@ using DataFrames: DataFrame, groupby
 using AcuteML: UN, parsehtml, root, nextelement, nodecontent
 using MLStyle: @match
 using Pseudopotentials:
-    CoreHoleEffect, ExchangeCorrelationFunctional, CoreValenceInteraction, Pseudization
+    CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
 using REPL.TerminalMenus: RadioMenu, request
 
 using ..UnifiedPseudopotentialFormat: UPFFileName
@@ -112,9 +112,9 @@ const ELEMENTS = (
 const DATABASE = DataFrame(
     element = [],
     fullrelativistic = Bool[],
-    corehole = UN{CoreHoleEffect}[],
+    corehole = UN{CoreHole}[],
     xc = UN{ExchangeCorrelationFunctional}[],
-    corevalence = UN{Vector{<:CoreValenceInteraction}}[],
+    cv = UN{Vector{<:ValenceCoreState}}[],
     pseudization = UN{Pseudization}[],
     free = String[],
     src = String[],
