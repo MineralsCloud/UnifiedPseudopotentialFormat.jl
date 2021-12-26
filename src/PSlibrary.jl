@@ -7,7 +7,7 @@ using Pseudopotentials:
     CoreHoleEffect, ExchangeCorrelationFunctional, CoreValenceInteraction, Pseudization
 using REPL.TerminalMenus: RadioMenu, request
 
-using ..UnifiedPseudopotentialFormat: PseudopotentialName
+using ..UnifiedPseudopotentialFormat: UPFFileName
 
 export list_elements, list_potentials, download_potentials
 
@@ -168,7 +168,7 @@ function list_potentials(element::Union{AbstractString,AbstractChar})
     element = lowercase(string(element))
     @assert element in ELEMENTS "element $element is not recognized!"
     for meta in _parsehtml(element)
-        parsed = parse(PseudopotentialName, meta.name)
+        parsed = parse(UPFFileName, meta.name)
         push!(DATABASE, [fieldvalues(parsed)..., meta.src])
     end
     return list_elements(false)[(uppercasefirst(element),)]
@@ -204,6 +204,6 @@ function download_potentials(element)
     return paths
 end
 
-fieldvalues(x::PseudopotentialName) = (getfield(x, i) for i in 1:nfields(x))
+fieldvalues(x::UPFFileName) = (getfield(x, i) for i in 1:nfields(x))
 
 end

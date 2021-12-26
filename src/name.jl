@@ -31,7 +31,7 @@ using Pseudopotentials:
 const PSEUDOPOTENTIAL_NAME =
     r"(?:(rel)-)?([^-]*-)?(?:(pz|vwn|pbe|pbesol|blyp|pw91|tpss|coulomb)-)(?:([spdfnl]*)-)?(ae|mt|bhs|vbc|van|rrkjus|rrkj|kjpaw|bpaw)(?:_(.*))?"i  # spdfnl?
 
-@with_kw mutable struct PseudopotentialName
+@with_kw mutable struct UPFFileName
     element::String
     fullrelativistic::Bool
     corehole::UN{CoreHoleEffect} = nothing
@@ -41,7 +41,7 @@ const PSEUDOPOTENTIAL_NAME =
     free::String = ""
 end
 
-function Base.parse(::Type{PseudopotentialName}, name)
+function Base.parse(::Type{UPFFileName}, name)
     prefix, extension = splitext(name)
     @assert uppercase(extension) == ".UPF"
     data = split(prefix, '.'; limit = 2)
@@ -90,7 +90,7 @@ function Base.parse(::Type{PseudopotentialName}, name)
                 ),
             )
         end
-        return PseudopotentialName(
+        return UPFFileName(
             element,
             fullrelativistic,
             corehole,
@@ -108,7 +108,7 @@ function Base.parse(::Type{PseudopotentialName}, name)
     end
 end
 
-function Base.string(x::PseudopotentialName)
+function Base.string(x::UPFFileName)
     arr = String[]
     if x.fullrelativistic
         push!(arr, "rel")
