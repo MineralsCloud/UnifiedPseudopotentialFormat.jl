@@ -35,7 +35,7 @@ const PSEUDOPOTENTIAL_NAME =
     fullrelativistic::Bool
     corehole::UN{CoreHole} = nothing
     xc::ExchangeCorrelationFunctional
-    corevalence::UN{Vector{<:ValenceCoreState}} = nothing
+    valencecore::UN{Vector{<:ValenceCoreState}} = nothing
     pseudization::Pseudization
     free::String = ""
 end
@@ -60,7 +60,7 @@ function Base.parse(::Type{UPFFileName}, name)
                 "tpss" => TaoPerdewStaroverovScuseria()
                 "coulomb" => Coulomb()
             end
-            corevalence = if m[4] !== nothing
+            valencecore = if m[4] !== nothing
                 map(collect(m[4])) do c
                     @match c begin
                         's' || 'p' || 'd' => SemicoreState(c)
@@ -93,7 +93,7 @@ function Base.parse(::Type{UPFFileName}, name)
             fullrelativistic,
             corehole,
             xc,
-            corevalence,
+            valencecore,
             pseudization,
             free,
         )
@@ -124,8 +124,8 @@ function Base.string(x::UPFFileName)
         ::TaoPerdewStaroverovScuseria => "tpss"
         ::Coulomb => "coulomb"
     end)
-    if x.corevalence !== nothing
-        push!(arr, join(map(x.corevalence) do c
+    if x.valencecore !== nothing
+        push!(arr, join(map(x.valencecore) do c
             @match c begin
                 c::Union{SemicoreState,CoreState} => string(c.orbital)
                 ::NonLinearCoreCorrection => 'n'

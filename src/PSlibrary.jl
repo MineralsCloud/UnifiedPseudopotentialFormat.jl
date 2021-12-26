@@ -205,7 +205,7 @@ end
 
 fieldvalues(x::UPFFileName) = (
     getfield(x, i) for
-    i in (:element, :fullrelativistic, :corehole, :xc, :corevalence, :pseudization)
+    i in (:element, :fullrelativistic, :corehole, :xc, :valencecore, :pseudization)
 )
 
 end
