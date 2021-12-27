@@ -1,5 +1,4 @@
 using AcuteML:
-    UN,
     Document,  # Not used, but required
     Node,  # Not used, but required
     parsexml,
@@ -245,7 +244,8 @@ function Base.read(filename::AbstractString, ::Type{UPF})
     return parse(UPF, str)
 end
 
-getdata(x::Union{Rhoatom,Nlcc,Local,R,Rab,Chi,Beta,Dij,Q,Multipoles,Qijl}) = parsevec(x.text)
+getdata(x::Union{Rhoatom,Nlcc,Local,R,Rab,Chi,Beta,Dij,Q,Multipoles,Qijl}) =
+    parsevec(x.text)
 
 function Base.getproperty(x::Header, name::Symbol)
     if name in (
