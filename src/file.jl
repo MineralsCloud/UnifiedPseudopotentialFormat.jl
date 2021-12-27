@@ -9,7 +9,7 @@ using AcuteML:
     @doc_str,
     @empty_str,
     @txt_str
-using Pseudopotentials: PseudopotentialFormat
+using Pseudopotentials: Pseudopotential
 
 export UPF, getdata
 
@@ -196,7 +196,7 @@ end
     aewfc::Vector{Aewfc}, "PP_AEWFC"
 end
 
-@aml struct UPF <: PseudopotentialFormat doc"UPF"
+@aml struct UPF <: Pseudopotential doc"UPF"
     version::VersionNumber, att"version"
     info::Info, "PP_INFO"
     header::Header, "PP_HEADER"
