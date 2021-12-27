@@ -1,5 +1,4 @@
 using AcuteML:
-    UN,
     Document,  # Not used, but required
     Node,  # Not used, but required
     parsexml,
@@ -9,7 +8,7 @@ using AcuteML:
     @doc_str,
     @empty_str,
     @txt_str
-using Pseudopotentials: PseudopotentialFormat
+using Pseudopotentials: Pseudopotential
 
 export UPF, getdata
 
@@ -196,7 +195,7 @@ end
     aewfc::Vector{Aewfc}, "PP_AEWFC"
 end
 
-@aml struct UPF <: PseudopotentialFormat doc"UPF"
+@aml struct UPF <: Pseudopotential doc"UPF"
     version::VersionNumber, att"version"
     info::Info, "PP_INFO"
     header::Header, "PP_HEADER"
@@ -245,7 +244,8 @@ function Base.read(filename::AbstractString, ::Type{UPF})
     return parse(UPF, str)
 end
 
-getdata(x::Union{Rhoatom,Nlcc,Local,R,Rab,Chi,Beta,Dij,Q,Multipoles,Qijl}) = parsevec(x.text)
+getdata(x::Union{Rhoatom,Nlcc,Local,R,Rab,Chi,Beta,Dij,Q,Multipoles,Qijl}) =
+    parsevec(x.text)
 
 function Base.getproperty(x::Header, name::Symbol)
     if name in (
