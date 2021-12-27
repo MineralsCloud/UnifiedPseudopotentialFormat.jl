@@ -171,7 +171,7 @@ end
     multipoles::UN{Multipoles}, "PP_MULTIPOLES"
     qfcoeff::UN{Qfcoeff}, "PP_QFCOEFF"
     rinner::UN{Rinner}, "PP_RINNER"
-    qijl::Vector{Union{Qijl,Qij}}, "PP_QIJL"
+    qijl::Vector{Qijl}, "PP_QIJL"
 end
 
 @aml struct Nonlocal "PP_NONLOCAL"
