@@ -12,8 +12,6 @@ using ..UnifiedPseudopotentialFormat: UPFFileName
 export list_elements,
     list_potentials, download_potentials, download_potential, search_potential
 
-const LIBRARY_ROOT = "https://www.quantum-espresso.org/pseudopotentials/ps-library/"
-const UPF_ROOT = "https://www.quantum-espresso.org"
 const ELEMENTS = (
     "h",
     "he",
@@ -110,16 +108,6 @@ const ELEMENTS = (
     "np",
     "pu",
 )
-const DATABASE = DataFrame(
-    element = [],
-    rel = Bool[],
-    corehole = UN{CoreHole}[],
-    xc = UN{ExchangeCorrelationFunctional}[],
-    cv = UN{Vector{<:ValenceCoreState}}[],
-    pseudization = UN{Pseudization}[],
-    src = String[],
-    name = String[],
-)
 const PERIODIC_TABLE = raw"""
 H                                                  He
 Li Be                               B  C  N  O  F  Ne
@@ -131,22 +119,6 @@ Fr Ra
       La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu
       Ac Th Pa U  Np Pu
 """
-
-function _parsehtml(element)
-    url = LIBRARY_ROOT * element
-    path = download(url)
-    str = read(path, String)
-    doc = parsehtml(str)
-    primates = root(doc)
-    anchors = findall("//table//a", primates)
-    return map(anchors) do anchor
-        (
-            name = strip(nodecontent(anchor)),
-            src = UPF_ROOT * anchor["href"],
-            metadata = nodecontent(nextelement(anchor)),
-        )
-    end
-end
 
 """
     list_elements(pt=true)
@@ -221,10 +193,5 @@ function download_potential(name::AbstractString, path)
         throw("potential '$name' is not in the database!")
     end
 end
-
-fieldvalues(x::UPFFileName) = (
-    getfield(x, i) for
-    i in (:element, :fullrelativistic, :corehole, :xc, :valencecore, :pseudization)
-)
 
 end
