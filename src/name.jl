@@ -1,6 +1,5 @@
 using AcuteML: UN
 using MLStyle: @match
-using Parameters: @with_kw
 using Pseudopotentials:
     CoreHole,
     ExchangeCorrelationFunctional,
@@ -27,18 +26,29 @@ using Pseudopotentials:
     CoreState,
     NonLinearCoreCorrection
 
-const PSEUDOPOTENTIAL_NAME =
-    r"(?:(rel)-)?([^-]*-)?(?:(pz|vwn|pbe|pbesol|blyp|pw91|tpss|coulomb)-)(?:([spdfn]*)l?-)?(ae|mt|bhs|vbc|van|rrkjus|rrkj|kjpaw|bpaw)(?:_(.*))?"i  # spdfnl?
+export UPFFileName
 
-@with_kw mutable struct UPFFileName
+const PSEUDOPOTENTIAL_NAME =
+    r"(?:(rel)-)?([^-]*-)?(?:(pz|vwn|pbe|pbesol|blyp|pw91|tpss|coulomb)-)(?:([spdfn]*)-)?(ae|mt|bhs|vbc|van|rrkjus|rrkj|kjpaw|bpaw)(?:_(.*))?"i  # spdfnl?
+
+mutable struct UPFFileName
     element::String
     fullrelativistic::Bool
-    corehole::UN{CoreHole} = nothing
+    corehole::UN{CoreHole}
     xc::ExchangeCorrelationFunctional
-    valencecore::UN{Vector{<:ValenceCoreState}} = nothing
+    valencecore::UN{Vector{<:ValenceCoreState}}
     pseudization::Pseudization
-    free::String = ""
+    free::String
 end
+UPFFileName(;
+    element,
+    fullrelativistic = false,
+    corehole = nothing,
+    xc,
+    valencecore = nothing,
+    pseudization,
+    free = "",
+) = UPFFileName(element, fullrelativistic, corehole, xc, valencecore, pseudization, free)
 
 function Base.parse(::Type{UPFFileName}, name)
     prefix, extension = splitext(name)
@@ -83,7 +93,7 @@ function Base.parse(::Type{UPFFileName}, name)
             free = m[6]
         else
             throw(
-                Meta.ParseError(
+                ArgumentError(
                     "parsing failed! The file name `$name` does not follow QE's naming convention!",
                 ),
             )
@@ -99,7 +109,7 @@ function Base.parse(::Type{UPFFileName}, name)
         )
     else
         throw(
-            Meta.ParseError(
+            ArgumentError(
                 "parsing failed! The file name `$name` does not follow QE's naming convention!",
             ),
         )
