@@ -5,7 +5,7 @@ using Pseudopotentials:
     CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
 
 using UnifiedPseudopotentialFormat: UPFFileName
-using UnifiedPseudopotentialFormat.PSlibrary: list_elements
+using UnifiedPseudopotentialFormat.PSlibrary: ELEMENTS, list_elements
 
 const ARTIFACT_TOML = joinpath(@__DIR__, "Artifacts.toml")
 const LIBRARY_ROOT = "https://www.quantum-espresso.org/pseudopotentials/ps-library/"
@@ -38,12 +38,13 @@ function makedb(element::String)
         src = String[],
         name = String[],
     )
-    elementdb_hash = artifact_hash(element, ARTIFACT_TOML)
-    for meta in _parsehtml(element)
+    for meta in _parsehtml(lowercase(element))
         parsed = parse(UPFFileName, meta.name)
         push!(database, [fieldvalues(parsed)..., meta.src, meta.name])
     end
-    list_elements(false)[(uppercasefirst(element),)]
+    return database
+end
+makedb(i::Integer) = makedb(ELEMENTS[i])
 end
 
 function uploaddb(path)
