@@ -1,5 +1,6 @@
 using AcuteML: UN, parsehtml, root, nextelement, nodecontent
 using DataFrames: DataFrame, groupby
+using JLD2: jldsave
 using Pkg.Artifacts: artifact_hash
 using Pseudopotentials:
     CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
@@ -45,6 +46,10 @@ function makedb(element::String)
     return database
 end
 makedb(i::Integer) = makedb(ELEMENTS[i])
+
+function serializedb(file, element)
+    database = makedb(element)
+    return jldsave(file; database)
 end
 
 function uploaddb(path)
