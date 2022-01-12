@@ -1,8 +1,8 @@
 using AcuteML: UN, parsehtml, root, nextelement, nodecontent
-using Artifacts:
-    artifact_hash, artifact_exists, create_artifact, archive_artifact, bind_artifact!
 using DataFrames: DataFrame, groupby
 using JLD2: jldsave
+using Pkg.Artifacts:
+    artifact_hash, artifact_exists, create_artifact, archive_artifact, bind_artifact!
 using Pseudopotentials:
     CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
 
@@ -32,7 +32,7 @@ end
 
 function makedb(element::String)
     database = DataFrame(
-        element = [],
+        element = String[],
         rel = Bool[],
         corehole = UN{CoreHole}[],
         xc = UN{ExchangeCorrelationFunctional}[],
@@ -48,9 +48,17 @@ function makedb(element::String)
     return database
 end
 makedb(i::Integer) = makedb(ELEMENTS[i])
+function makedb()
+    data = mapreduce(makedb, append!, ELEMENTS)
+    return groupby(data, :element)
+end
 
 function savedb(file, element)
     database = makedb(element)
+    return jldsave(file; database)
+end
+function savedb(file)
+    database = makedb()
     return jldsave(file; database)
 end
 
@@ -71,6 +79,22 @@ function makeartifact(element::AbstractString)
     end
 end
 makeartifact(i::Integer) = makeartifact(ELEMENTS[i])
+function makeartifact()
+    dir_hash = artifact_hash("all", ARTIFACT_TOML)
+    if dir_hash === nothing || !artifact_exists(dir_hash)
+        dir_hash = create_artifact() do artifact_dir
+            savedb(joinpath(artifact_dir, "all.jld2"))
+        end
+        tar_hash = archive_artifact(dir_hash, "all.tar.gz")
+        bind_artifact!(
+            ARTIFACT_TOML,
+            "all",
+            dir_hash;
+            download_info = [(DATABASE_URL_BASE * "all.tar.gz", tar_hash)],
+            lazy = true,
+        )
+    end
+end
 
 grepvalues(x::UPFFileName) = (
     getfield(x, i) for

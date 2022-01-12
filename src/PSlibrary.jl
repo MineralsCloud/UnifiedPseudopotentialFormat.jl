@@ -1,6 +1,5 @@
 module PSlibrary
 
-using Artifacts: @artifact_str
 using DataFrames: DataFrame, groupby
 using AcuteML: UN, parsehtml, root, nextelement, nodecontent
 using JLD2: load
@@ -8,6 +7,7 @@ using LazyArtifacts
 using MLStyle: @match
 using Pseudopotentials:
     CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
+using Pkg.Artifacts: @artifact_str
 using REPL.TerminalMenus: RadioMenu, request
 
 using ..UnifiedPseudopotentialFormat: UPFFileName
@@ -132,7 +132,7 @@ function list_elements(pt = true)
     if pt
         println(PERIODIC_TABLE)
     end
-    return groupby(unique!(DATABASE), :element)
+    return loaddb()
 end
 
 """
@@ -143,11 +143,7 @@ List all pseudopotentials in `PSlibrary` for a specific element (abbreviation or
 function list_potentials(element::Union{AbstractString,AbstractChar})
     element = lowercase(string(element))
     @assert element in ELEMENTS "element $element is not recognized!"
-    for meta in _parsehtml(element)
-        parsed = parse(UPFFileName, meta.name)
-        push!(DATABASE, [fieldvalues(parsed)..., meta.src, meta.name])
-    end
-    return list_elements(false)[(uppercasefirst(element),)]
+    return loaddb(element)
 end
 function list_potentials(atomic_number::Integer)
     @assert 1 <= atomic_number <= 94
@@ -191,7 +187,7 @@ function download_potential(name::AbstractString, path)
     df = list_potentials(x.element)
     if name in df.name
         i = findfirst(==(name), df.name)
-        download(df.src[i], path)
+        return download(df.src[i], path)
     else
         throw("potential '$name' is not in the database!")
     end
@@ -199,7 +195,12 @@ end
 
 function loaddb(element::AbstractString)
     artifact_path = joinpath(@artifact_str(element), "$element.jld2")
-    load(artifact_path)["database"]
+    return load(artifact_path)["database"]
+end
+loaddb(i::Integer) = loaddb(ELEMENTS[i])
+function loaddb()
+    artifact_path = joinpath(artifact"all", "all.jld2")
+    return load(artifact_path)["database"]
 end
 
 end

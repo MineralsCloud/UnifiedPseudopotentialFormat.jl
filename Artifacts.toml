@@ -22,6 +22,14 @@ lazy = true
     sha256 = "64d7713bb9b1e766a4762d52b4828155b5c26f3a8487c516d0a402e7c04797de"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/al.tar.gz"
 
+[all]
+git-tree-sha1 = "0fd60ae0d71a6334be1bd5a5e3e6afe604030b19"
+lazy = true
+
+    [[all.download]]
+    sha256 = "6e182fa335f72db0b9131cb7a613e9ab7cd7e584795ea151532e1cb999e83179"
+    url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/all.tar.gz"
+
 [ar]
 git-tree-sha1 = "dafcfdbbde59c25e4b80557d2e4bf35353db4eb5"
 lazy = true
