@@ -32,7 +32,7 @@ end
 
 function makedb(element::String)
     database = DataFrame(
-        element = [],
+        element = String[],
         rel = Bool[],
         corehole = UN{CoreHole}[],
         xc = UN{ExchangeCorrelationFunctional}[],
