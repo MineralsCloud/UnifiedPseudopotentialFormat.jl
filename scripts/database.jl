@@ -1,7 +1,8 @@
 using AcuteML: UN, parsehtml, root, nextelement, nodecontent
+using Artifacts:
+    artifact_hash, artifact_exists, create_artifact, archive_artifact, bind_artifact!
 using DataFrames: DataFrame, groupby
 using JLD2: jldsave
-using Pkg.Artifacts: artifact_hash, artifact_exists, create_artifact, bind_artifact!
 using Pseudopotentials:
     CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
 
