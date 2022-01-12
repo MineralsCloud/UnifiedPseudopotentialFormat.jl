@@ -199,7 +199,7 @@ end
 
 function loaddb(element::AbstractString)
     artifact_path = joinpath(@artifact_str(element), "$element.jld2")
-    load(artifact_path)["database"]
+    return load(artifact_path)["database"]
 end
 
 end
