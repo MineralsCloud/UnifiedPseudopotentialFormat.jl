@@ -1,6 +1,5 @@
 module PSlibrary
 
-using Artifacts: @artifact_str
 using DataFrames: DataFrame, groupby
 using AcuteML: UN, parsehtml, root, nextelement, nodecontent
 using JLD2: load
@@ -8,6 +7,7 @@ using LazyArtifacts
 using MLStyle: @match
 using Pseudopotentials:
     CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
+using Pkg.Artifacts: @artifact_str
 using REPL.TerminalMenus: RadioMenu, request
 
 using ..UnifiedPseudopotentialFormat: UPFFileName
