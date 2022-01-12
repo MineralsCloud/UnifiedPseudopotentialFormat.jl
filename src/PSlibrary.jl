@@ -132,7 +132,7 @@ function list_elements(pt = true)
     if pt
         println(PERIODIC_TABLE)
     end
-    return groupby(unique!(DATABASE), :element)
+    return loaddb()
 end
 
 """
