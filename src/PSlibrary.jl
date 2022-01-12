@@ -143,11 +143,7 @@ List all pseudopotentials in `PSlibrary` for a specific element (abbreviation or
 function list_potentials(element::Union{AbstractString,AbstractChar})
     element = lowercase(string(element))
     @assert element in ELEMENTS "element $element is not recognized!"
-    for meta in _parsehtml(element)
-        parsed = parse(UPFFileName, meta.name)
-        push!(DATABASE, [fieldvalues(parsed)..., meta.src, meta.name])
-    end
-    return list_elements(false)[(uppercasefirst(element),)]
+    return loaddb(element)
 end
 function list_potentials(atomic_number::Integer)
     @assert 1 <= atomic_number <= 94
