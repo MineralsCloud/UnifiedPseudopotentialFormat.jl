@@ -1,7 +1,10 @@
 module PSlibrary
 
+using Artifacts: @artifact_str
 using DataFrames: DataFrame, groupby
 using AcuteML: UN, parsehtml, root, nextelement, nodecontent
+using JLD2: load
+using LazyArtifacts
 using MLStyle: @match
 using Pseudopotentials:
     CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
@@ -10,7 +13,7 @@ using REPL.TerminalMenus: RadioMenu, request
 using ..UnifiedPseudopotentialFormat: UPFFileName
 
 export list_elements,
-    list_potentials, download_potentials, download_potential, search_potential
+    list_potentials, download_potentials, download_potential, search_potential, loaddb
 
 const ELEMENTS = (
     "h",
@@ -192,6 +195,11 @@ function download_potential(name::AbstractString, path)
     else
         throw("potential '$name' is not in the database!")
     end
+end
+
+function loaddb(element::AbstractString)
+    artifact_path = joinpath(@artifact_str(element), "$element.jld2")
+    load(artifact_path)["database"]
 end
 
 end
