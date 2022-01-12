@@ -9,12 +9,12 @@ using UnifiedPseudopotentialFormat: UPFFileName
 using UnifiedPseudopotentialFormat.PSlibrary: ELEMENTS, list_elements
 
 const ARTIFACT_TOML = joinpath(dirname(@__DIR__), "Artifacts.toml")
-const LIBRARY_ROOT = "https://www.quantum-espresso.org/pseudopotentials/ps-library/"
-const UPF_ROOT = "https://www.quantum-espresso.org"
-const DOWNLOAD_URL_ROOT = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/"
+const LIBRARY_URL_BASE = "https://www.quantum-espresso.org/pseudopotentials/ps-library/"
+const UPF_URL_BASE = "https://www.quantum-espresso.org"
+const DATABASE_URL_BASE = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/"
 
-function _parsehtml(element)
-    url = LIBRARY_ROOT * element
+function getrawdata(element)
+    url = LIBRARY_URL_BASE * element
     path = download(url)
     str = read(path, String)
     doc = parsehtml(str)
@@ -23,7 +23,7 @@ function _parsehtml(element)
     return map(anchors) do anchor
         (
             name = strip(nodecontent(anchor)),
-            src = UPF_ROOT * anchor["href"],
+            src = UPF_URL_BASE * anchor["href"],
             metadata = nodecontent(nextelement(anchor)),
         )
     end
@@ -40,15 +40,15 @@ function makedb(element::String)
         src = String[],
         name = String[],
     )
-    for meta in _parsehtml(lowercase(element))
+    for meta in getrawdata(lowercase(element))
         parsed = parse(UPFFileName, meta.name)
-        push!(database, [fieldvalues(parsed)..., meta.src, meta.name])
+        push!(database, [grepvalues(parsed)..., meta.src, meta.name])
     end
     return database
 end
 makedb(i::Integer) = makedb(ELEMENTS[i])
 
-function serializedb(file, element)
+function savedb(file, element)
     database = makedb(element)
     return jldsave(file; database)
 end
@@ -58,7 +58,7 @@ function makeartifact(element::AbstractString)
     if pslibrary_hash === nothing || !artifact_exists(pslibrary_hash)
         element_hash = create_artifact() do artifact_dir
             download(
-                "$(DOWNLOAD_URL_ROOT)/$element.jld2",
+                "$(DATABASE_URL_BASE)/$element.jld2",
                 joinpath(artifact_dir, "$element.jld2"),
             )
         end
@@ -67,7 +67,7 @@ function makeartifact(element::AbstractString)
 end
 makeartifact(i::Integer) = makeartifact(ELEMENTS[i])
 
-fieldvalues(x::UPFFileName) = (
+grepvalues(x::UPFFileName) = (
     getfield(x, i) for
     i in (:element, :fullrelativistic, :corehole, :xc, :valencecore, :pseudization)
 )
