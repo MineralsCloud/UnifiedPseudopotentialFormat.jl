@@ -1,16 +1,17 @@
 using AcuteML: UN, parsehtml, root, nextelement, nodecontent
 using DataFrames: DataFrame, groupby
 using JLD2: jldsave
-using Pkg.Artifacts: artifact_hash
+using Pkg.Artifacts: artifact_hash, artifact_exists, create_artifact, bind_artifact!
 using Pseudopotentials:
     CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
 
 using UnifiedPseudopotentialFormat: UPFFileName
 using UnifiedPseudopotentialFormat.PSlibrary: ELEMENTS, list_elements
 
-const ARTIFACT_TOML = joinpath(@__DIR__, "Artifacts.toml")
+const ARTIFACT_TOML = joinpath(dirname(@__DIR__), "Artifacts.toml")
 const LIBRARY_ROOT = "https://www.quantum-espresso.org/pseudopotentials/ps-library/"
 const UPF_ROOT = "https://www.quantum-espresso.org"
+const DOWNLOAD_URL_ROOT = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/"
 
 function _parsehtml(element)
     url = LIBRARY_ROOT * element
@@ -52,9 +53,19 @@ function serializedb(file, element)
     return jldsave(file; database)
 end
 
-function uploaddb(path)
-    url_base = "https://github.com/MineralsCloud/PseudopotentialArtifacts/pslibrary"
+function makeartifact(element::AbstractString)
+    pslibrary_hash = artifact_hash("pslibrary", ARTIFACT_TOML)
+    if pslibrary_hash === nothing || !artifact_exists(pslibrary_hash)
+        element_hash = create_artifact() do artifact_dir
+            download(
+                "$(DOWNLOAD_URL_ROOT)/$element.jld2",
+                joinpath(artifact_dir, "$element.jld2"),
+            )
+        end
+        bind_artifact!(ARTIFACT_TOML, element, element_hash)
+    end
 end
+makeartifact(i::Integer) = makeartifact(ELEMENTS[i])
 
 fieldvalues(x::UPFFileName) = (
     getfield(x, i) for
