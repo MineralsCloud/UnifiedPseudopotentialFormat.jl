@@ -197,5 +197,10 @@ function loaddb(element::AbstractString)
     artifact_path = joinpath(@artifact_str(element), "$element.jld2")
     return load(artifact_path)["database"]
 end
+loaddb(i::Integer) = loaddb(ELEMENTS[i])
+function loaddb()
+    artifact_path = joinpath(artifact"all", "all.jld2")
+    return load(artifact_path)["database"]
+end
 
 end
