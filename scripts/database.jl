@@ -54,15 +54,19 @@ function savedb(file, element)
 end
 
 function makeartifact(element::AbstractString)
-    pslibrary_hash = artifact_hash("pslibrary", ARTIFACT_TOML)
-    if pslibrary_hash === nothing || !artifact_exists(pslibrary_hash)
+    element_hash = artifact_hash(element, ARTIFACT_TOML)
+    if element_hash === nothing || !artifact_exists(element_hash)
         element_hash = create_artifact() do artifact_dir
-            download(
-                "$(DATABASE_URL_BASE)/$element.jld2",
-                joinpath(artifact_dir, "$element.jld2"),
-            )
+            savedb(joinpath(artifact_dir, "$element.jld2"), element)
         end
-        bind_artifact!(ARTIFACT_TOML, element, element_hash)
+        tar_hash = archive_artifact(element_hash, "$element.tar.gz")
+        bind_artifact!(
+            ARTIFACT_TOML,
+            element,
+            element_hash;
+            download_info = [(DATABASE_URL_BASE * "$element.tar.gz", tar_hash)],
+            lazy = true,
+        )
     end
 end
 makeartifact(i::Integer) = makeartifact(ELEMENTS[i])
