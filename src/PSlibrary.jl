@@ -187,7 +187,7 @@ function download_potential(name::AbstractString, path)
     df = list_potentials(x.element)
     if name in df.name
         i = findfirst(==(name), df.name)
-        download(df.src[i], path)
+        return download(df.src[i], path)
     else
         throw("potential '$name' is not in the database!")
     end
