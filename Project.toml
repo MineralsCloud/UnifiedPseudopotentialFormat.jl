@@ -1,7 +1,7 @@
 name = "UnifiedPseudopotentialFormat"
 uuid = "8030dd95-f9ed-4dd5-b230-99ba15524fc3"
 authors = ["Reno <singularitti@outlook.com>"]
-version = "0.1.1-DEV"
+version = "0.2.0"
 
 [deps]
 AcuteML = "6b84a0a3-a11a-41fa-a417-e600528de108"
