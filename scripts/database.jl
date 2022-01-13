@@ -63,16 +63,16 @@ function savedb(file)
 end
 
 function makeartifact(element::AbstractString)
-    element_hash = artifact_hash(element, ARTIFACT_TOML)
-    if element_hash === nothing || !artifact_exists(element_hash)
-        element_hash = create_artifact() do artifact_dir
+    dir_hash = artifact_hash(element, ARTIFACT_TOML)
+    if dir_hash === nothing || !artifact_exists(dir_hash)
+        dir_hash = create_artifact() do artifact_dir
             savedb(joinpath(artifact_dir, "$element.jld2"), element)
         end
-        tar_hash = archive_artifact(element_hash, "$element.tar.gz")
+        tar_hash = archive_artifact(dir_hash, "$element.tar.gz")
         bind_artifact!(
             ARTIFACT_TOML,
             element,
-            element_hash;
+            dir_hash;
             download_info = [(DATABASE_URL_BASE * "$element.tar.gz", tar_hash)],
             lazy = true,
         )
