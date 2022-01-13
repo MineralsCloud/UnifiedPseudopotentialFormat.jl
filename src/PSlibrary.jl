@@ -12,6 +12,8 @@ using REPL.TerminalMenus: RadioMenu, request
 
 using ..UnifiedPseudopotentialFormat: UPFFileName
 
+import Pseudopotentials: download_potential
+
 export list_elements,
     list_potentials, download_potentials, download_potential, potential_exists
 
