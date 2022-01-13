@@ -13,7 +13,7 @@ using REPL.TerminalMenus: RadioMenu, request
 using ..UnifiedPseudopotentialFormat: UPFFileName
 
 export list_elements,
-    list_potentials, download_potentials, download_potential, search_potential, loaddb
+    list_potentials, download_potentials, download_potential, potential_exists
 
 const ELEMENTS = (
     "h",
@@ -176,7 +176,7 @@ function download_potentials(element)
     return paths
 end
 
-function search_potential(name::AbstractString)
+function potential_exists(name::AbstractString)
     x = parse(UPFFileName, name)
     db = list_potentials(x.element)
     return name in db.name
