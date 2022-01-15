@@ -32,23 +32,8 @@ const PSEUDOPOTENTIAL_NAME =
     r"(?:(rel)-)?([^-]*-)?(?:(pz|vwn|pbe|pbesol|blyp|pw91|tpss|coulomb)-)(?:([spdfn]*)l?-)?(ae|mt|bhs|vbc|van|rrkjus|rrkj|kjpaw|bpaw)(?:_(.*))?"i  # spdfnl?
 
 struct UPFFileName
-    element::String
-    fullrelativistic::Bool
-    corehole::UN{CoreHole}
-    xc::ExchangeCorrelationFunctional
-    valencecore::UN{Vector{<:ValenceCoreState}}
-    pseudization::Pseudization
-    free::String
+    name::String
 end
-UPFFileName(;
-    element,
-    fullrelativistic = false,
-    corehole = nothing,
-    xc,
-    valencecore = nothing,
-    pseudization,
-    free = "",
-) = UPFFileName(element, fullrelativistic, corehole, xc, valencecore, pseudization, free)
 
 function Base.parse(::Type{UPFFileName}, name)
     prefix, extension = splitext(name)
@@ -114,45 +99,4 @@ function Base.parse(::Type{UPFFileName}, name)
             ),
         )
     end
-end
-
-function Base.string(x::UPFFileName)
-    arr = String[]
-    if x.fullrelativistic
-        push!(arr, "rel")
-    end
-    if x.corehole !== nothing
-        push!(arr, string(x.corehole))
-    end
-    push!(arr, @match x.xc begin
-        ::PerdewZunger => "pz"
-        ::VoskoWilkNusair => "vwn"
-        ::PerdewBurkeErnzerhof => "pbe"
-        ::PerdewBurkeErnzerhofRevisedForSolids => "pbesol"
-        ::BeckeLeeYangParr => "blyp"
-        ::PerdewWang91 => "pw91"
-        ::TaoPerdewStaroverovScuseria => "tpss"
-        ::Coulomb => "coulomb"
-    end)
-    if x.valencecore !== nothing
-        push!(arr, join(map(x.valencecore) do c
-            @match c begin
-                c::Union{SemicoreState,CoreState} => string(c.orbital)
-                ::NonLinearCoreCorrection => 'n'
-            end
-        end))
-    end
-    push!(arr, @match x.pseudization begin
-        ::TroullierMartins => "mt"
-        ::BacheletHamannSchlüter => "bhs"
-        ::VonBarthCar => "vbc"
-        ::Vanderbilt => "van"
-        ::RappeRabeKaxirasJoannopoulos => "rrkj"
-        ::RappeRabeKaxirasJoannopoulosUltrasoft => "rrkjus"
-        ::KresseJoubert => "kjpaw"
-        ::Blöchl => "bpaw"
-        ::AllElectron => "ae"
-    end)
-    prefix = x.element * '.' * join(arr, '-') * '_' * x.free
-    return prefix * ".UPF"
 end
