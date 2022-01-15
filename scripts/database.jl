@@ -6,7 +6,7 @@ using Pkg.Artifacts:
 using Pseudopotentials:
     CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
 
-using UnifiedPseudopotentialFormat: UPFFileName
+using UnifiedPseudopotentialFormat: UPFFile
 using UnifiedPseudopotentialFormat.PSlibrary: ELEMENTS, list_elements
 
 const ARTIFACT_TOML = joinpath(dirname(@__DIR__), "Artifacts.toml")
@@ -42,8 +42,24 @@ function makedb(element::String)
         name = String[],
     )
     for meta in getrawdata(lowercase(element))
-        parsed = parse(UPFFileName, meta.name)
-        push!(database, [grepvalues(parsed)..., meta.src, meta.name])
+        info = analyzename(UPFFile(meta.name))
+        push!(
+            database,
+            [
+                (
+                    getindex(info, i) for i in (
+                        :element,
+                        :fullrelativistic,
+                        :corehole,
+                        :xc,
+                        :valencecore,
+                        :pseudization,
+                    )
+                )...,
+                meta.src,
+                meta.name,
+            ],
+        )
     end
     return database
 end
@@ -95,8 +111,3 @@ function makeartifact()
         )
     end
 end
-
-grepvalues(x::UPFFileName) = (
-    getfield(x, i) for
-    i in (:element, :fullrelativistic, :corehole, :xc, :valencecore, :pseudization)
-)
