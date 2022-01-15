@@ -35,7 +35,8 @@ struct UPFFile
     name::String
 end
 
-function Base.parse(::Type{UPFFileName}, name)
+function analyzename(file::UPFFile)
+    name = file.name
     prefix, extension = splitext(name)
     @assert uppercase(extension) == ".UPF"
     data = split(prefix, '.'; limit = 2)
@@ -83,14 +84,14 @@ function Base.parse(::Type{UPFFileName}, name)
                 ),
             )
         end
-        return UPFFileName(
-            element,
-            fullrelativistic,
-            corehole,
-            xc,
-            valencecore,
-            pseudization,
-            free,
+        return (
+            element = element,
+            fullrelativistic = fullrelativistic,
+            corehole = corehole,
+            xc = xc,
+            valencecore = valencecore,
+            pseudization = pseudization,
+            free = free,
         )
     else
         throw(
