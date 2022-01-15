@@ -36,8 +36,7 @@ struct UPFFile
 end
 
 function analyzename(file::UPFFile)
-    name = file.name
-    prefix, extension = splitext(name)
+    prefix, extension = splitext(file.name)
     @assert uppercase(extension) == ".UPF"
     data = split(prefix, '.'; limit = 2)
     if length(data) == 2
@@ -77,27 +76,20 @@ function analyzename(file::UPFFile)
                 "bpaw" => Blöchl()
             end
             free = m[6]
-        else
-            throw(
-                ArgumentError(
-                    "parsing failed! The file name `$name` does not follow QE's naming convention!",
-                ),
+            return (
+                element = element,
+                fullrelativistic = fullrelativistic,
+                corehole = corehole,
+                xc = xc,
+                valencecore = valencecore,
+                pseudization = pseudization,
+                free = free,
             )
         end
-        return (
-            element = element,
-            fullrelativistic = fullrelativistic,
-            corehole = corehole,
-            xc = xc,
-            valencecore = valencecore,
-            pseudization = pseudization,
-            free = free,
-        )
-    else
-        throw(
-            ArgumentError(
-                "parsing failed! The file name `$name` does not follow QE's naming convention!",
-            ),
-        )
     end
+    throw(
+        ArgumentError(
+            "parsing failed! The file name `$(file.name)` does not follow QE's naming convention!",
+        ),
+    )
 end
