@@ -10,7 +10,7 @@ using Pseudopotentials:
 using Pkg.Artifacts: @artifact_str
 using REPL.TerminalMenus: RadioMenu, request
 
-using ..UnifiedPseudopotentialFormat: UPFFile
+using ..UnifiedPseudopotentialFormat: UPFFile, analyzename
 
 import Pseudopotentials: download_potential
 
