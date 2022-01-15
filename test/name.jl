@@ -6,6 +6,6 @@ using UnifiedPseudopotentialFormat
         # "Be.pbesol-sl-rrkjus_psl.1.0.0.UPF",
         "Be.rel-pz-n-rrkjus_psl.0.2.UPF",
     )
-        @test string(parse(UPFFileName, str)) == str
+        @test string(parse(UPFFile, str)) == str
     end
 end

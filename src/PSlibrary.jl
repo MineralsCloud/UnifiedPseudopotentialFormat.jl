@@ -10,7 +10,7 @@ using Pseudopotentials:
 using Pkg.Artifacts: @artifact_str
 using REPL.TerminalMenus: RadioMenu, request
 
-using ..UnifiedPseudopotentialFormat: UPFFileName
+using ..UnifiedPseudopotentialFormat: UPFFile
 
 import Pseudopotentials: download_potential
 
@@ -179,13 +179,13 @@ function download_potentials(element)
 end
 
 function potential_exists(name::AbstractString)
-    x = parse(UPFFileName, name)
+    x = parse(UPFFile, name)
     db = list_potentials(x.element)
     return name in db.name
 end
 
 function download_potential(name::AbstractString, path)
-    x = parse(UPFFileName, name)
+    x = parse(UPFFile, name)
     df = list_potentials(x.element)
     if name in df.name
         i = findfirst(==(name), df.name)
