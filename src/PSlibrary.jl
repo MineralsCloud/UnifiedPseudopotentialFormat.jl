@@ -179,13 +179,13 @@ function download_potentials(element)
 end
 
 function potential_exists(name::AbstractString)
-    x = parse(UPFFile, name)
+    x = analyzename(UPFFile(name))
     db = list_potentials(x.element)
     return name in db.name
 end
 
 function download_potential(name::AbstractString, path)
-    x = parse(UPFFile, name)
+    x = analyzename(UPFFile(name))
     df = list_potentials(x.element)
     if name in df.name
         i = findfirst(==(name), df.name)
