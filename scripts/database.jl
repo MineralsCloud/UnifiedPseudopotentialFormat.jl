@@ -6,7 +6,7 @@ using Pkg.Artifacts:
 using Pseudopotentials:
     CoreHole, ExchangeCorrelationFunctional, ValenceCoreState, Pseudization
 
-using UnifiedPseudopotentialFormat: UPFFile
+using UnifiedPseudopotentialFormat: UPFFile, analyzename
 using UnifiedPseudopotentialFormat.PSlibrary: ELEMENTS, list_elements
 
 const ARTIFACT_TOML = joinpath(dirname(@__DIR__), "Artifacts.toml")
