@@ -1,759 +1,759 @@
 [ac]
-git-tree-sha1 = "dba6658cfba15f647b8049dcd7da98474e50f034"
+git-tree-sha1 = "515ac5c75c33877c2c6bbc3ec045756de2ff6e52"
 lazy = true
 
     [[ac.download]]
-    sha256 = "61cc6770876c075cc22a3baef9abd58d67a8c25f39525431b3633e5ba08f04de"
+    sha256 = "c03cee95bc5fcdca7e8276fba8b5f9a8b82e1e4be2dc3c2f82804880fb362088"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ac.tar.gz"
 
 [ag]
-git-tree-sha1 = "a57191e1b7e22b459a05a15aa1c0d0a527d2bea4"
+git-tree-sha1 = "59e8909c9c4d9df9462c227a3e128ac922edb5ad"
 lazy = true
 
     [[ag.download]]
-    sha256 = "71a129edd64d19d6fd823b18cd46ae8139395d9f776840178f67ebe26d61cccd"
+    sha256 = "4a562e331896b2661a1ec83c1f0c4beb14e4491236e3c8296c5d0a135fd0b7a7"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ag.tar.gz"
 
 [al]
-git-tree-sha1 = "38f019cb7f67da5f63efd55386ee84f162572d02"
+git-tree-sha1 = "f9a728a238b2d33951b076d49df09640837cd9be"
 lazy = true
 
     [[al.download]]
-    sha256 = "64d7713bb9b1e766a4762d52b4828155b5c26f3a8487c516d0a402e7c04797de"
+    sha256 = "0303a60e3dbc3300a8854cceffc673578155994624aefa69313eae596f6bf7c4"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/al.tar.gz"
 
 [all]
-git-tree-sha1 = "0fd60ae0d71a6334be1bd5a5e3e6afe604030b19"
+git-tree-sha1 = "e52ab282f88f3781d1f435bb248a8da60b2cea09"
 lazy = true
 
     [[all.download]]
-    sha256 = "6e182fa335f72db0b9131cb7a613e9ab7cd7e584795ea151532e1cb999e83179"
+    sha256 = "f8e8ece411b07c614ce288e65bb17154aa5e9f5891b790c2e8336c771b974267"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/all.tar.gz"
 
 [ar]
-git-tree-sha1 = "dafcfdbbde59c25e4b80557d2e4bf35353db4eb5"
+git-tree-sha1 = "c3abac0c275a42e8c5adb5ea4196d7f45303f899"
 lazy = true
 
     [[ar.download]]
-    sha256 = "743ff4451035160821f6455458bd93a6689a02a26857ba5d468c7f65b4bd95dc"
+    sha256 = "887e39333bde79ee4837e0acba3121b3c8e635d75c8d9f1121cb14643c5791b9"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ar.tar.gz"
 
 [as]
-git-tree-sha1 = "86595211743ad82c7d571e5f1bc83ff5ceb1aff6"
+git-tree-sha1 = "2613291af4c6fb4a4e159e6bbb8f0cc4ef818f48"
 lazy = true
 
     [[as.download]]
-    sha256 = "3015958fd787324baf0039d89377d5055a71a4bc816e9362d9b34c7bb79a7d6a"
+    sha256 = "18777555f3a50d55589c4562e9bf1f52c31a29b90bf88545a6b7f34cccec65b7"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/as.tar.gz"
 
 [at]
-git-tree-sha1 = "cf55ba6383e70010696278310dcb5fe7b483b328"
+git-tree-sha1 = "1cea84dd80119acae33d40d4ed1297f5b9b2dd69"
 lazy = true
 
     [[at.download]]
-    sha256 = "4dd705f2444d7ba6c11d7ae2a5152487e756ea578be6dc143e076392e2483767"
+    sha256 = "07440869f53d31bfb7da80fc32595963e42ef4d84c989eded629f654ef0d0dbd"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/at.tar.gz"
 
 [au]
-git-tree-sha1 = "24ac095b7a2ba2161da270533678e6d54b5d00ee"
+git-tree-sha1 = "23a26fd5099798f853435737bb4271b4e63727a1"
 lazy = true
 
     [[au.download]]
-    sha256 = "f04579a4cf839e32816cdaa09beb7b0a420fec87faf5fda9e1a1adeb62fa85b8"
+    sha256 = "943eedb62e585b7c998386105ddb402a1a6e9f044cbcae39dd4b18391913e30b"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/au.tar.gz"
 
 [b]
-git-tree-sha1 = "11c14dc0efd4cab1c788874ce082cad77fe1836d"
+git-tree-sha1 = "14afb18f156b3c72531d0b18a1b977a0f27ede3a"
 lazy = true
 
     [[b.download]]
-    sha256 = "c44fa06cb82cbf1f89abd9a95b9be81d25238644e43daa6a2ea74370d81d2f16"
+    sha256 = "b9c10a218436aa0f25ad7bba5ca5c284cbc66d30c99304c876faf113dd762213"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/b.tar.gz"
 
 [ba]
-git-tree-sha1 = "e8a88610fe3907693151fec7675646e0dc42a405"
+git-tree-sha1 = "649aa63313de10a9ae5a4c1c10c4ffb20cf1a894"
 lazy = true
 
     [[ba.download]]
-    sha256 = "107b13dd18ec6d688a1c8e95cdc263916240299dd14f25469000c276eb775a0b"
+    sha256 = "129aa201338ff86445aac97a659c522cae76f73349c5b949f106f5468fc7c4b3"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ba.tar.gz"
 
 [be]
-git-tree-sha1 = "6ef328b32fc994f76b3b3dea936cde684b169a56"
+git-tree-sha1 = "300ac3d87713d3548f549791afb8d08fc0514b38"
 lazy = true
 
     [[be.download]]
-    sha256 = "4982e3ff8fa5214716ea4599ae6527c925295220da0709e3b7f1cd17241fdb80"
+    sha256 = "7979d37bc697a0dad6fdaa122a527d9a1617ab892f77210488628fd480a64bd7"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/be.tar.gz"
 
 [bi]
-git-tree-sha1 = "d5ce83993677ab4c50b992f55bf03fd7eec828e4"
+git-tree-sha1 = "413c3b9266cfed7c9a36d61dd68898e034ea4d79"
 lazy = true
 
     [[bi.download]]
-    sha256 = "cea7280642991d51f98bfb1e7cb32662ab7b7702d4b6f3e150cf5048fd3d1de9"
+    sha256 = "3cdb011d79a0061c7ec87c44e65b3f3c41f8e20eb107887a885661cc9808c382"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/bi.tar.gz"
 
 [br]
-git-tree-sha1 = "1f8bdf36e01a67674207efd64304065c17cc033f"
+git-tree-sha1 = "9b6a8ce4cafa8f4c0a0ed0d6bd312a2ce23d76b3"
 lazy = true
 
     [[br.download]]
-    sha256 = "f2602e0aed2e32df08c04ffce1710b305c92eae3e00d3e6e5aa1d39140570d3b"
+    sha256 = "40d615f90d536e2d69c13b96201e3831b3eeb4139e9216965acc2e330270069c"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/br.tar.gz"
 
 [c]
-git-tree-sha1 = "8eb641fd4f72bbf07d16300f8f1081078beae70e"
+git-tree-sha1 = "1c883783a9a210deeedb999f38b872ca9ce7c2cd"
 lazy = true
 
     [[c.download]]
-    sha256 = "41e85f956235cf3932e64562d9c5892954a5ea56cbbdffb6f17baed010b40c45"
+    sha256 = "da5952a68cecbffed07e48b391df075895773d95275e2efabb6f01893d2b97fd"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/c.tar.gz"
 
 [ca]
-git-tree-sha1 = "124eec5dc7f08ed848b65798b59a46e974f2b2fa"
+git-tree-sha1 = "8b07b2ac39949e13f9b04af4aa3985d37bcca2e8"
 lazy = true
 
     [[ca.download]]
-    sha256 = "a6c52d2c3c244af77f7ab12c43fbba356d82782a1b76e6d13b70917c4da88b6c"
+    sha256 = "7e49f74858efb90063b0938b7ea80ede8497a32d1560b853a1872d6aee53cf82"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ca.tar.gz"
 
 [cd]
-git-tree-sha1 = "84c72ad60ffe785a6f44493569955ce0741ea62c"
+git-tree-sha1 = "4626812496365f0e03c7d44825a735e9fd7a8d1e"
 lazy = true
 
     [[cd.download]]
-    sha256 = "f6aa58a171cb6dbeec0a94761cd90cb2a8194cde0a81e9b392328b6a1bde0ac2"
+    sha256 = "ab016d4529bb74a7d4b66199d8ec07104af273457b3a6ea21a91f2dc4ae1643a"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/cd.tar.gz"
 
 [ce]
-git-tree-sha1 = "caeb84726fd440b723ed1485d4f7f42b9ee61ba2"
+git-tree-sha1 = "6c909a5fca4d2ba3c9c6a5f6e2fcee26bd51bc43"
 lazy = true
 
     [[ce.download]]
-    sha256 = "80a9ace305e32b9176e2453d398d3e196bcb6a9f0283c0f35f8a2388264769d0"
+    sha256 = "62fac2221ef45a4b5abf751b1d4b3a8c7e2bd345b6db82d38dea6583fab4f443"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ce.tar.gz"
 
 [cl]
-git-tree-sha1 = "cf62a6b825ac4a27035589bd1cbc464359f5c4e7"
+git-tree-sha1 = "77d025104ee8fce4012413293aacd640d7cc4268"
 lazy = true
 
     [[cl.download]]
-    sha256 = "ba6b679ca286521accdc627e8b9be85c0a86b044cf3ea841369af0bde918633e"
+    sha256 = "3c6aaf3e96e6fdd6dc58fb27fb1e87919c31aa9ad1ec45d1d28b3060736a9312"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/cl.tar.gz"
 
 [co]
-git-tree-sha1 = "a88454c86bddf52582980a33f8a93e057b9eced7"
+git-tree-sha1 = "16d715dc4be83362bb07b3547938dd750347bc8b"
 lazy = true
 
     [[co.download]]
-    sha256 = "8ee4c63f40f2ceced66bf0a816074cb5beab52b8e7d98f0d962aa41970f85337"
+    sha256 = "ce1b8853a42d48e83ce7eb9c748b3c8e92685dcf6cbda8e9022f5c8981e46604"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/co.tar.gz"
 
 [cr]
-git-tree-sha1 = "1023d3459e6834616de20d1b80175236a9144b6d"
+git-tree-sha1 = "fbf8d395a9a1df8b83f080e7bcd55fda6dbad49c"
 lazy = true
 
     [[cr.download]]
-    sha256 = "b2749e9b26719168b753835af5834ac03e68e67ae62bdddd8c07e49ea96c8b43"
+    sha256 = "b92c9bea16896e7f277e8612cd908b5c0d03c55785b36433a354bad51ac01eeb"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/cr.tar.gz"
 
 [cs]
-git-tree-sha1 = "48f6c59679c02d58663e5e3a06d4289015e0b430"
+git-tree-sha1 = "58d28dbd1bb8b6d4cf73cd7a0a6cd3454bf58942"
 lazy = true
 
     [[cs.download]]
-    sha256 = "708de376758ce8104b5d12762de862828ec946579b3056d99f4affec2f5e8c75"
+    sha256 = "9c9ca707390cb1c8d8a65ecbf27fb4374a49c8856ae1f23d017a18ad6fa59413"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/cs.tar.gz"
 
 [cu]
-git-tree-sha1 = "4057467190761f39bbac8bbcdac0db11d0ee70f9"
+git-tree-sha1 = "c26b8f2de9f9b5b2e0b2cc117517def82f228300"
 lazy = true
 
     [[cu.download]]
-    sha256 = "e92c377c9346ba3ec5fb5cb4ee8ff0f697db6b95cfca3ed386171222a55ee439"
+    sha256 = "71f14fe985200c0b0459a472885547ec196f59342f773897e6444cc8c67a3d2e"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/cu.tar.gz"
 
 [dy]
-git-tree-sha1 = "83be37936061d1d6e7763f11cf12cca7de5f0cc7"
+git-tree-sha1 = "b17570dfe82b2d6b73e0720e7820d97a7d44d8b6"
 lazy = true
 
     [[dy.download]]
-    sha256 = "244f7a160882041ea2777c6b466ffb29357545179e9fa5b524cdff1ec373e73d"
+    sha256 = "2cc8685de8691952d3bc43fbf6965d34a3195f24ff8bae319f2407d1c811c1ac"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/dy.tar.gz"
 
 [er]
-git-tree-sha1 = "b761947261b78507ae6f13273058844a1bcbda74"
+git-tree-sha1 = "b47495695d97972f3b0afa4e37d125f0de00b8cc"
 lazy = true
 
     [[er.download]]
-    sha256 = "f2ce75e4916ed0c0c154065c5b6c1f170fcd489eee7933a182a9d9f876e79ea8"
+    sha256 = "5df831311f77408df4cac126fef127eeaa08945b1436b6d2aa7c264d0e85ef30"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/er.tar.gz"
 
 [eu]
-git-tree-sha1 = "29ddb156e488859b9befdb29edacd39146aad0eb"
+git-tree-sha1 = "d60bcaf58ede0747587b04f39c166d2857bc7db2"
 lazy = true
 
     [[eu.download]]
-    sha256 = "caa614af07286c6599cd79863870442b58d1e6a5eb9d69ce72ed1fd1adfc7851"
+    sha256 = "d486fb901a28af8ae92974634461ad13867cec1e8165006bdfa1914e68e267fb"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/eu.tar.gz"
 
 [f]
-git-tree-sha1 = "eadd04aa3915813de50cd4dcd7f4a258b1a61298"
+git-tree-sha1 = "75d36169ad8d2f2cdb92b64fddee4ad9a74f2a56"
 lazy = true
 
     [[f.download]]
-    sha256 = "e7294dd0713ee48bb93bdbb35ca68db86afdfdf425dbb7b4af69df3ddcc9f621"
+    sha256 = "7539345c3a165432823801a46f13d3d54bac9869a014ca531ded4d0fab8ae256"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/f.tar.gz"
 
 [fe]
-git-tree-sha1 = "133c713ca562d8eb43aa2904d9fea0a9634383b1"
+git-tree-sha1 = "3b7aca8a5d0a9bba7c6f4fe0ee9c4d0cd7362126"
 lazy = true
 
     [[fe.download]]
-    sha256 = "9eebd08cb3810c5ab2e0c220d6a986f1a3d3d78cbf8457ffbe2adaaac3d957aa"
+    sha256 = "0ce5a8ad48db0e836485e6560950edefb87b6dec59fb09f0ccf5e484bce1b2e4"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/fe.tar.gz"
 
 [fr]
-git-tree-sha1 = "76fbdac9b6a855355541da2c54751edbe8b627d5"
+git-tree-sha1 = "91ffb8bb5cc02c7422d0b908a4cf963f6a8371b9"
 lazy = true
 
     [[fr.download]]
-    sha256 = "bb753ff15685ea2694d0fa40da50de041cb085a247561b5fca96fb1cb7245fef"
+    sha256 = "7e82cfd96570de3016ffb96a35c06c8bd08f52b50241cd17d7256bd95308ae76"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/fr.tar.gz"
 
 [ga]
-git-tree-sha1 = "9391d3be6a1738a680a6652e94807ebff5a05c7e"
+git-tree-sha1 = "cb8f02b7d563979663f588cbcf35c2fad3b4da83"
 lazy = true
 
     [[ga.download]]
-    sha256 = "26273fae5ef76cd82c41e90b9edb5c39c497d6943ba8cec7d71ac729f7b16574"
+    sha256 = "b727448f57142f0640282f5956cf2c4132d6a734a22ee842355ba13a0631a560"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ga.tar.gz"
 
 [gd]
-git-tree-sha1 = "60ba5addea592a4efeb1dd00fff895618223f470"
+git-tree-sha1 = "d6e927e0630a28932faa55763440040476c86d85"
 lazy = true
 
     [[gd.download]]
-    sha256 = "e60a978b3f20585396cb9aff38c8992e040b3d78b2f22eb6791043cd8fa224c6"
+    sha256 = "adbf5f81514323b65366e4947e89fd9dcaad6967ee02da5c47b0773c3f4364a7"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/gd.tar.gz"
 
 [ge]
-git-tree-sha1 = "5b5390c8380dc3bf2d0178eddaacb76291346869"
+git-tree-sha1 = "356b8cb92b598c557309f232b4e4dac62b043bb2"
 lazy = true
 
     [[ge.download]]
-    sha256 = "70c0bb9aec24015fbf305d4a2f8033410ee820d2d1e0a420afa80840174158a1"
+    sha256 = "859fd4d5e5b28327d9daab522959c0eaccc9889e2ab8bcdab19d6d75a6d932a4"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ge.tar.gz"
 
 [h]
-git-tree-sha1 = "215d1408c34d500aa992b66be38c980763675310"
+git-tree-sha1 = "80ee3bc55a52a5a481b7ee985f22fb9ee54662d2"
 lazy = true
 
     [[h.download]]
-    sha256 = "7ee94c1883ac79e64d30cee82daf2dbc67e4b2ff42b3b3e0f1859c5dfdb1035c"
+    sha256 = "220e9bc0143fdd35719b0d33a040e1498e1232b2f2594f9c6fcd9b7a07df7b4d"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/h.tar.gz"
 
 [he]
-git-tree-sha1 = "bc82162a353d0506db564e3b6b7365f5d3f05df5"
+git-tree-sha1 = "3fab8a621a58a34cafe83be0d79cd4276a0ed417"
 lazy = true
 
     [[he.download]]
-    sha256 = "ba14e3844c6f43d5839a4add8a8322a49b332aa7a255a1e83d2392195cc3653d"
+    sha256 = "667b537ce7c7ec35a86b910a7099a6ac832f214a7682aba1c7e9327fe9a40616"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/he.tar.gz"
 
 [hf]
-git-tree-sha1 = "507dece2a52ce0f3bf62855da1f6b99d1ac3fff5"
+git-tree-sha1 = "267aaab2698951ae64e8f79862c06e6e42c6bf89"
 lazy = true
 
     [[hf.download]]
-    sha256 = "2585cf309df59dcc75bd1928cc3df18a81f7ed32682fc482ab4627739b2ff56b"
+    sha256 = "bfc9dcd18465683a8130f70169ea47af2f5f47efdcc4a6d2fb51ceaf4ecc50e1"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/hf.tar.gz"
 
 [hg]
-git-tree-sha1 = "2d310494e61bebd43d580ebe3599efcbebe1269e"
+git-tree-sha1 = "4f5ec9c2782f646da01a21595c9e3820bbfe67cf"
 lazy = true
 
     [[hg.download]]
-    sha256 = "a52cc463ce82cb36c3c1b7233ca1a9002f6426bf86528c6af39a31efce3799e4"
+    sha256 = "e9bc5e2714c6bc85449875a97bdf27488fac5b2c3f5966aad65d557532af936a"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/hg.tar.gz"
 
 [ho]
-git-tree-sha1 = "4b376efe92d91685f7455ac89a9fc00c44f2ab2f"
+git-tree-sha1 = "ca3338f94a5a1f8c159e74e89dbc76c444ffa9ff"
 lazy = true
 
     [[ho.download]]
-    sha256 = "e6bce0a14a05d9e9d8a1f3c86eba3366f35e061a96d19a0aec58b01097303766"
+    sha256 = "dd5929fb2115bcc543e574923db88805b1057447f49300f4036181a919d77989"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ho.tar.gz"
 
 [i]
-git-tree-sha1 = "c720a7ed173bb03ace9c96b6f3cd9039a2d2cfab"
+git-tree-sha1 = "4d0792bd40dda9a97756e376e50874137ff05a0f"
 lazy = true
 
     [[i.download]]
-    sha256 = "48ba5260cf5209e5bb1d0d998fbb8756fdc4c97b13984231ecd5974012e87bcd"
+    sha256 = "196e5b3e99daceb810987706f9c0e6d57d542c47205fdc9c9a51dac581212509"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/i.tar.gz"
 
 [in]
-git-tree-sha1 = "9b21be8f1e28a5596cd06a6588a981347061f534"
+git-tree-sha1 = "02f979d89d25d935237710248395c447b8dbd8b5"
 lazy = true
 
     [[in.download]]
-    sha256 = "4d43a5c47cd18f70525b4379f0e153474e804c3788dc8ceff2a53c42667fdbd7"
+    sha256 = "c015e0007b1517764cd16d639fb39914d84262833b2975220c52bc2033d0a48a"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/in.tar.gz"
 
 [ir]
-git-tree-sha1 = "ea212a901a73f819198022b4341d5d721eb47b68"
+git-tree-sha1 = "c710136fd7b69e53e146e4fb3a1b96b88d586aea"
 lazy = true
 
     [[ir.download]]
-    sha256 = "8f8d184d0f95602a355ed8d298afb3448807c9d1ddcad2f8f3dd310a847a550a"
+    sha256 = "b6818ef67a098bb54ad72b8404b475abcb6565c0ad9255208c48a9a8d91f2460"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ir.tar.gz"
 
 [k]
-git-tree-sha1 = "d76639e05d427ca95a50f2da3172fe935d783833"
+git-tree-sha1 = "18a4251f48ace089bef83427da2cd96a017c3091"
 lazy = true
 
     [[k.download]]
-    sha256 = "2763f56574c186a5471998d511061e90aafaa25e330c0bd04a1fbd053698bd38"
+    sha256 = "9f959655846fafefbebe03dae152cf4c64c4c6ba6ccfdb454c52c2802f44d06c"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/k.tar.gz"
 
 [kr]
-git-tree-sha1 = "7c263953ff7f907a9f02dbd6e15dcf91ab96fc72"
+git-tree-sha1 = "9ac8a3cb3992c0faa7405626a89ca1be1216dd51"
 lazy = true
 
     [[kr.download]]
-    sha256 = "b9fdc8d1c7669d6d41bafe20b0acf060959bf094c8102419bfa100276cf36aa8"
+    sha256 = "1a67906cc236c68ed62fce58c3a9e8ea146f2754bd6faee56ed3000b6ec6e011"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/kr.tar.gz"
 
 [la]
-git-tree-sha1 = "d9ec60dd75b32c72fe0e5a7dec647a62dedc8cb2"
+git-tree-sha1 = "8179274c3c2f260e893f0449ec608a81e404a04d"
 lazy = true
 
     [[la.download]]
-    sha256 = "0a702b11b5a856390b53de1417d440f6c86970547c6910cef74259ddb759d22e"
+    sha256 = "ca41b5a0c3ab64449bacae0c3ec4a1c2acfe8ff951ccf956ac18f47ec867bd2b"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/la.tar.gz"
 
 [li]
-git-tree-sha1 = "47f959985097c05b64b23303a8fd986156c6cb5d"
+git-tree-sha1 = "6dcb06834a9b05d5852b8d7d158d09f0ea961979"
 lazy = true
 
     [[li.download]]
-    sha256 = "f9cde423cdd1b4844b8f5df7a36198963bb0a66159b22b26df18e0baa0861876"
+    sha256 = "0f4536a42af2865443a49a162e96b12a7d472a15181ddc99645916d21e238674"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/li.tar.gz"
 
 [lu]
-git-tree-sha1 = "793a85ffc1c5bbf8ffdea4231881b3637fbcb9ed"
+git-tree-sha1 = "ddb144c683fc74da18733e057690e15a5e2c3c7e"
 lazy = true
 
     [[lu.download]]
-    sha256 = "07ad2d5b0a526ccac16ba64e63c9b5c2b9db67e8ff9f8fec2bb12daec4c9c378"
+    sha256 = "27d517a678c7016bab614007ee89ff6dbf170a8a79f5b8e6fa2a1761774ebd14"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/lu.tar.gz"
 
 [mg]
-git-tree-sha1 = "d71a0ebfcaa521fce5d847facc25574652a666d4"
+git-tree-sha1 = "e68b4d41da279f896cf530c16b5cbaee6f32f1f5"
 lazy = true
 
     [[mg.download]]
-    sha256 = "cae1b0bf01b7339ea7a0c0c19812cdcf5f37e448d4bfab9c4cad4f839c8f8cd7"
+    sha256 = "e0935683b7ab7086965859d6cb237706fe743e050578366ec4690033ab7f7ec4"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/mg.tar.gz"
 
 [mn]
-git-tree-sha1 = "2e088da4cbaf0e93e183b4148bf5a2313d4fca86"
+git-tree-sha1 = "efe0154d4499b0a430be9f012489ef12739e0413"
 lazy = true
 
     [[mn.download]]
-    sha256 = "5b6ad9fa0b9f90ceb385f14688f36edb8ba416e14c964d997dcfcdb3542cda6f"
+    sha256 = "5f2a638edca5ddb4d049c0be12fd386379e0f06a2c3a077cb781b28c34d35b34"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/mn.tar.gz"
 
 [mo]
-git-tree-sha1 = "6999eb09155a46130b4d8238fc1fd8d9d327383c"
+git-tree-sha1 = "e5025dd11f7291d356674d7ad2bf7964450c20f1"
 lazy = true
 
     [[mo.download]]
-    sha256 = "1913a7c58fe75a955b67376767f815d7ba5313b4a8c8705d11b5be0303fbc764"
+    sha256 = "a551b69ef487d3b861ae5eb0448b2c7ccedb68e9f43a911631a72bb4b3a3f962"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/mo.tar.gz"
 
 [n]
-git-tree-sha1 = "e5e98ad4db80d5a70a1dc80e2c35103b32c83c75"
+git-tree-sha1 = "592b8c80d3a5651b2d3d02cbfd69263bd22dbc68"
 lazy = true
 
     [[n.download]]
-    sha256 = "4a5e57ee6870c0bc6e582d4ce8bd88672a2298951e3e0ded03384053b40f8ef6"
+    sha256 = "89228796e0cc7cf10d90aa5d1c782f7dea53f35f9d8b09481d9f4bba9867bcb0"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/n.tar.gz"
 
 [na]
-git-tree-sha1 = "15f2369ddc65ce08a4695bee1fb9cfa8f7aa02ac"
+git-tree-sha1 = "fe81b7aa322fe1f06dc573f24bf5a86dd6afda16"
 lazy = true
 
     [[na.download]]
-    sha256 = "ce80f84bae26d9d125ff416909f5e3c0aed6de7ed2a2866c6502cd21db4cf6c9"
+    sha256 = "1792bfdc27de987f92e60351c20574417cd7d833490b9d7c1afe25e57bb11871"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/na.tar.gz"
 
 [nb]
-git-tree-sha1 = "e0d85e5f2d62f26f39049792c00550c1ea595a02"
+git-tree-sha1 = "ce16c93ff596cd5abbe997e930ab2e473c667166"
 lazy = true
 
     [[nb.download]]
-    sha256 = "8eaeb70366cc2b73c0306296ec036319604a64a556cf3f5eac63b47bb969fd47"
+    sha256 = "24f4e045159fa7d178e77dff2eeae246e6d7636a63b6ee155e8a0d439ef4f60f"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/nb.tar.gz"
 
 [nd]
-git-tree-sha1 = "dff43eed8278e44f25d4713c20f7b02e722ccbdd"
+git-tree-sha1 = "6c2d0e07d491aadfddd380af69722de430c421ab"
 lazy = true
 
     [[nd.download]]
-    sha256 = "3cb8fc7c2a1f11518dc53bda49b97186c3937ab45cee7569fd689493a2fd871f"
+    sha256 = "8da607c620edea3f6d279974c6e1bf4c6a88aec5e5131a979b95589366d68f52"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/nd.tar.gz"
 
 [ne]
-git-tree-sha1 = "67fbe79e729bbaaf5a1a64dabe3f4267bb34094c"
+git-tree-sha1 = "559c42ef111ea64da2305e328fef033d578257a6"
 lazy = true
 
     [[ne.download]]
-    sha256 = "a307e8725e516564ff6a20b8d470c5fbe867b94eef17de03f29e4bf8f2c15818"
+    sha256 = "11e9cd950f4407a164901b264795b3c1a99a2b0a02148db901879d15e7e058a4"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ne.tar.gz"
 
 [ni]
-git-tree-sha1 = "b95cbf3e19495504aa8baf6fde593e310cd2a7eb"
+git-tree-sha1 = "a14a3d9eaee3da626680a0fe536f7956cf2a0ffd"
 lazy = true
 
     [[ni.download]]
-    sha256 = "2ac2a8c16a98eca47e410097f3434d364a637ba9d4fa914b935affc7cbfbf173"
+    sha256 = "6018d6101552959d8902afe92bde4cf55084c9e96d70e02db4ec3def424cc9bf"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ni.tar.gz"
 
 [np]
-git-tree-sha1 = "223b758db9d451848cb96a76870454a84afc039b"
+git-tree-sha1 = "26712d4154e8857094f2f427573a351852eff57b"
 lazy = true
 
     [[np.download]]
-    sha256 = "60c29a8be3648b8fc27392e55a971a222a082e79ee960226b85400cb5101b483"
+    sha256 = "e2fe94d7767b121e83ac0c374889e1111407fdfa652e4ae5e82de6b90fcea88f"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/np.tar.gz"
 
 [o]
-git-tree-sha1 = "bc1ab8b07e1b6ebaf4d57cfc7887e536a0225289"
+git-tree-sha1 = "0d7c87ff514359b485d1c85d93466b41f72b3864"
 lazy = true
 
     [[o.download]]
-    sha256 = "e9ddd3b815f410c12dc10d4390cb251ad268de72ce0b6cde589ee0607ce9ff1f"
+    sha256 = "b6b64143ad5f3e6375bb01fc827b9f18959106430b4f9465fdbef49f7e1371c2"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/o.tar.gz"
 
 [os]
-git-tree-sha1 = "22aaa40be51249eb645da6404ccb5562ff01e5be"
+git-tree-sha1 = "8c064c82073a75297b821bd4c50080bbab744c36"
 lazy = true
 
     [[os.download]]
-    sha256 = "edd4d05b569ada3b24a8264e69f3c57efc25395a0d46c48497d1516b1cde77d7"
+    sha256 = "50cc673ec01151bbb93881cf200cff2e02134fcfbe7c66e15268121d4ef09e0a"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/os.tar.gz"
 
 [p]
-git-tree-sha1 = "9b287162f3d8674f9c0860978d5611027febc507"
+git-tree-sha1 = "97a5bdcd57abf11e8e77f2a10ee9021fd3ef0775"
 lazy = true
 
     [[p.download]]
-    sha256 = "93bc11e714ea37fd17c0e3cd2c76d304d528488923bd09ecacb6cd2212c213d3"
+    sha256 = "c11ccd1d2445ae73cffb3553e02245dc683f76616eaa7d0c33a2c4ddab87fb69"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/p.tar.gz"
 
 [pa]
-git-tree-sha1 = "dee148915ee758464e2d45ef5ef9c9d5f7440c2f"
+git-tree-sha1 = "8d0329ab1af03fbee5648993416281e94b71f65b"
 lazy = true
 
     [[pa.download]]
-    sha256 = "85453a65304ccf8d87c6549cdd8267c865daaf99db4fe1af501f58ff35eef693"
+    sha256 = "6e55ad41b285a035ba909ca58ff23efd1a4d625158adf06f0d3e53db9cac461b"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/pa.tar.gz"
 
 [pb]
-git-tree-sha1 = "10ac5a8fed4052f9967688cd558f4654b1f788f6"
+git-tree-sha1 = "7f9980a05b074c32f80b59fc36186db5f76dad0c"
 lazy = true
 
     [[pb.download]]
-    sha256 = "861d2b804a43a3a7f2168f88854c0f13c0f00ba04fa6ffb52881d140d19bbc59"
+    sha256 = "dfc22e82f390a22735d8b095f116a5b702111ebb438d2a184f841d6a4dcf9e0f"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/pb.tar.gz"
 
 [pd]
-git-tree-sha1 = "5b5215b3553dd1c9cccd0838ffbb99f9663300fb"
+git-tree-sha1 = "579a182fa81ee0400b8477e5e0993c1f19bd5080"
 lazy = true
 
     [[pd.download]]
-    sha256 = "44a70507b32b1353631d8d377f448b89730916221e946097995c0be3d86f4220"
+    sha256 = "d0f1a40a0e7dd7607cc1cc0530b494d96118c9656451004aafed15541dbb301c"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/pd.tar.gz"
 
 [pm]
-git-tree-sha1 = "bfca11ad88a940f340292b4dc58dd85bdc75e64e"
+git-tree-sha1 = "8ad33e997f2dd535d6ee7156efbfea502b5e0455"
 lazy = true
 
     [[pm.download]]
-    sha256 = "d37f8bed872d33d94191b13789aa7fea15cf6e824bcd8ba75cc953a3bcd318e1"
+    sha256 = "95634df4c22c4bbe6832f7b453681c3b7ca3d5b74ca38e34dbff07ac69b94012"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/pm.tar.gz"
 
 [po]
-git-tree-sha1 = "3f9825bd6dbbc0761e7c01d27d482f82c4ba0bc4"
+git-tree-sha1 = "1518250a25fc7bf100e0c3aa2b7faafcc215d6ad"
 lazy = true
 
     [[po.download]]
-    sha256 = "3846d2d61bb014f54de01eae1b22ddcfad6c4f0127852ba086712656b54ef3f0"
+    sha256 = "5fd88ed7e0d22cecf6fd6911e137baf9ee936be52f90aaa2b086ae1bc0e8d45b"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/po.tar.gz"
 
 [pr]
-git-tree-sha1 = "90e3020f2a46d3bfa1b03e1e1cd80b024e8a52bf"
+git-tree-sha1 = "594afeec08fc74a02f607e42d45eb325883fd737"
 lazy = true
 
     [[pr.download]]
-    sha256 = "a5f77d4aa4dd83113207276b59e6f02158917a26e13fd068d9185ffa412525d8"
+    sha256 = "657450942c1a812e2584da12456f1169da917efe186b21df97ef8788369cadb3"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/pr.tar.gz"
 
 [pt]
-git-tree-sha1 = "63fa666b9d3e3e49d0321dd54d57de9914a21469"
+git-tree-sha1 = "a39ea75bd2375cb4c994a86e30056c78ed91f4ff"
 lazy = true
 
     [[pt.download]]
-    sha256 = "2d37698ae87e20e6a9439fdb6463cc6513742fa3c159e5fd1a09937cd7e84dd1"
+    sha256 = "ee7f5489cd1b6947c6231ada0b3283749aec21a2181679fd5dd074de9f2c4975"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/pt.tar.gz"
 
 [pu]
-git-tree-sha1 = "daa66e799d296a42bc2f76b340c14cd09c253208"
+git-tree-sha1 = "bda100e3f25d139079819463972a433fcb4252f8"
 lazy = true
 
     [[pu.download]]
-    sha256 = "b0c14a5dfd5084d45cc9a279e0f88147427a191119cda02e37c0ee28b0a4aef5"
+    sha256 = "2e6f4b8d70aabf8cd25b36bf8a2e7b392a03921f1baf2e90b7aa2ea32b0add49"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/pu.tar.gz"
 
 [ra]
-git-tree-sha1 = "df33c68a76bd4308db23b18ee040bf2635c359a8"
+git-tree-sha1 = "f004fb5a788662cfe9f71391e95c000a25627436"
 lazy = true
 
     [[ra.download]]
-    sha256 = "87d4d56da66d87e2143aaa4aaced22bbedb11297a27c28bbd6b1068cfc8fe1cf"
+    sha256 = "6cced70efd12f2f30f6ac540c59b6566eab680b707b806bf6df04e4e62b0f141"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ra.tar.gz"
 
 [rb]
-git-tree-sha1 = "2b326969c519600c267497cbf92618b1821cd45f"
+git-tree-sha1 = "aad65bccbbf52f906d1ffeca30b4c3c85858fd27"
 lazy = true
 
     [[rb.download]]
-    sha256 = "da366b82775d12a8d13bc54940fd7e8bbbb8306e86831909fcd6130143c7df6d"
+    sha256 = "929476305303a3f4da5e0d0e062e4a3b4e49d24101ce583ae6d593df3cc7345e"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/rb.tar.gz"
 
 [re]
-git-tree-sha1 = "48aa66033363a3a09f8725cc804bede9a274e03b"
+git-tree-sha1 = "68aaa83490d2b4844d91a6f8df7555bba8957c07"
 lazy = true
 
     [[re.download]]
-    sha256 = "56091cc4fd9a82286aff5d7b5d85d1de3818f11820d146b9b0d3b887fecdf682"
+    sha256 = "e7ae37d8d5b67162b693f98e7bd91688f3fbb334726543bec0efb3b7777fc97b"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/re.tar.gz"
 
 [rh]
-git-tree-sha1 = "b9c2285084c61b4df5a030f9b8832ac8e749b2cf"
+git-tree-sha1 = "e43364ae61245ab5965021eb9403996a7faeb800"
 lazy = true
 
     [[rh.download]]
-    sha256 = "a0d4ed19395162b9780c880a49c4ed7b1ce5a2dc5591a9b7688205d0f504195b"
+    sha256 = "63f7f03688340ebd374c616ab131b3a8a49bb1c5c5d41b943d368b390521a1e0"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/rh.tar.gz"
 
 [rn]
-git-tree-sha1 = "0dc52a6e2e65a151fdbf93c7f7ef8736798aa323"
+git-tree-sha1 = "10b69e9f51b1175cef4bd650257003e104bf9a68"
 lazy = true
 
     [[rn.download]]
-    sha256 = "6dc0cc3592b8677709fb2b1a97fcf61a1cad900a0f87dc588214dd29dd476889"
+    sha256 = "6615a90075fb6858755e47c2b6b18f01b423016020f39c9efae94407f1f70702"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/rn.tar.gz"
 
 [ru]
-git-tree-sha1 = "0a185af5be412d43592288f1e12fb41372a70a04"
+git-tree-sha1 = "0f1c1f832b00e1678be3a272dbbf117f7c083a63"
 lazy = true
 
     [[ru.download]]
-    sha256 = "5f1d9ab776a70d9694f47263be46479ac79684ef93059d56a25dcefec7a4c2da"
+    sha256 = "b43baa0e108c30702f40681312b3fa0db4717b4c44ffb82a7e5a327f5ac22b92"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ru.tar.gz"
 
 [s]
-git-tree-sha1 = "af3df341a1af5fdc07cee597dcbefca1be5db79e"
+git-tree-sha1 = "4a9a8671cc6c3dab81e797c2a50743d3bea1bbcc"
 lazy = true
 
     [[s.download]]
-    sha256 = "c9395cf8a205d70a29cc24e055d9a58be5c57cb4bf6c28c2ae00eead1fa8debd"
+    sha256 = "7e761395075ba0b8b44c8d4f15252e6d865e8c997e3aa944935e983610f45167"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/s.tar.gz"
 
 [sb]
-git-tree-sha1 = "35ca6e80d7838a846e124892178ceda0477665db"
+git-tree-sha1 = "9dab5d103e0ef7ec0e8943285080545ab5c81cf7"
 lazy = true
 
     [[sb.download]]
-    sha256 = "ee1ec0c8c505ec9f9a65901db00b73e989b6d8e4724365add4ed110485df4c12"
+    sha256 = "a0e05d6f84f7e6318532473b094375a9e9273ad3dd14e1153c04e5330deea121"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/sb.tar.gz"
 
 [sc]
-git-tree-sha1 = "9e078a92f12347c4ccce60cd8d2c443173fecc71"
+git-tree-sha1 = "df3572be25ae1cb659e679819f7d4a43227bb78b"
 lazy = true
 
     [[sc.download]]
-    sha256 = "568c311ff567386f1ce68fbc6c6b0d6685ee6be3274a91cd527cd7b65912f8b1"
+    sha256 = "18edb2294843b5c2ad0632aad8377ae041518726cd103b4c5fe79274bf4bd84c"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/sc.tar.gz"
 
 [se]
-git-tree-sha1 = "2fd16be638e0a529698d8ce63166c4728247afb5"
+git-tree-sha1 = "4d50304b2b76a1ff06c495a0f85803728ff4da00"
 lazy = true
 
     [[se.download]]
-    sha256 = "f27ceaa2df1d1c5fe990bc84dfedb9d8531446b9b827a756a1bac798a074ff18"
+    sha256 = "87673f84752a06cf6a42ca4c360e36af512b66673073178fcbf29c43a0c1d6b1"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/se.tar.gz"
 
 [si]
-git-tree-sha1 = "40a249ae93d27df570f88224c0b7ef8e2d0ed072"
+git-tree-sha1 = "d95f04803b129a4e459a87b64b4d71d0fd1188c0"
 lazy = true
 
     [[si.download]]
-    sha256 = "d1879ef240c5931c9532a75729e15093ea8a08c78b044123b6fd2268e8a581ce"
+    sha256 = "bc3038a647e7a62a431a20209c008bd33ee029bd9826dcf9cc0fd4bc48ba3b93"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/si.tar.gz"
 
 [sm]
-git-tree-sha1 = "2fdcc188a5d91fd765db67c0213182bbb4e0a251"
+git-tree-sha1 = "4c46ff2430cc4d7995a42ded41e02318e5af4965"
 lazy = true
 
     [[sm.download]]
-    sha256 = "b437b4a7fd82a8871bc2e2f8fa6ff642265cecc5aa7f64e0c0f8b5a6d9205dca"
+    sha256 = "99e6de867b295181b525726e83b456e31a8e210309b9d329e55a0827e10d5be2"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/sm.tar.gz"
 
 [sn]
-git-tree-sha1 = "cd10031b94d3a83441604f68717752fbc392056b"
+git-tree-sha1 = "d4bea89709bb8c0b02c6a7e5b1f8a0c747ae0d32"
 lazy = true
 
     [[sn.download]]
-    sha256 = "6b95fcf9c0ad6bf6d47099961629679e0844c837c66abad8440fac3e3e334896"
+    sha256 = "54b9d6a2b49beb90c3f8fef7b33a304ea22434ad7922114c76e4ad1234c71465"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/sn.tar.gz"
 
 [sr]
-git-tree-sha1 = "3fb5061777ac2bf577b9eaad8b18ded523ea0c30"
+git-tree-sha1 = "06beed1efd7e2cb39d3886654be569880848832d"
 lazy = true
 
     [[sr.download]]
-    sha256 = "13d42fa06e66fd191073ce9ffe0bc5e5b949bbaa7512153900dbc8f63cad4d12"
+    sha256 = "3c6cd4dcfe572c5ef6ba06bcd51fef44322098ee74d4aac651977a27297c47df"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/sr.tar.gz"
 
 [ta]
-git-tree-sha1 = "23493f38b36d962dfeb2712bad517e1bd0ca588d"
+git-tree-sha1 = "257bb7d8fd2fd9916ad737e797685e270cb5883f"
 lazy = true
 
     [[ta.download]]
-    sha256 = "5e06725d62ecb6c5586de4826e3cd4de73edc5c47b2b49e9902bf37e93df2f48"
+    sha256 = "9201668ca262d751464d313ba0fa53a27e7111c2e9db404d676b04f3d0806f0d"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ta.tar.gz"
 
 [tb]
-git-tree-sha1 = "fbc4a773e644a5f3419fb985f0bab07c75ef4720"
+git-tree-sha1 = "cdc334d347d27b3c95fef2980d2302b860c86d59"
 lazy = true
 
     [[tb.download]]
-    sha256 = "7d8864fb1e9f793fabfdd597c99b5f9d9ee7daf3c19db64d1f707ba613fdd9e5"
+    sha256 = "bea6b2b33c7a0952501d3dcfa923c777338c4caf19ba7ace9b7dbe6f54559560"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/tb.tar.gz"
 
 [tc]
-git-tree-sha1 = "6098936116047ddc1b73dec1d2529c0bcb235bce"
+git-tree-sha1 = "57b3a97f9937964e5e86995f4242ce5212720bb5"
 lazy = true
 
     [[tc.download]]
-    sha256 = "48a8f074820ee599ada006a492322965d52952e53afe272a2c628489eddc4004"
+    sha256 = "f044bdb86ddf61d28089babe08f147ad4ee32b9e8d52b0d7950a54d0d2b8434e"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/tc.tar.gz"
 
 [te]
-git-tree-sha1 = "c34a343c433859e25f092cbec403dc19fc340216"
+git-tree-sha1 = "4afd8c88f6605f388fac54b4ad079591e9790713"
 lazy = true
 
     [[te.download]]
-    sha256 = "a8200b915af5e0416ed8c7a2c742e0b2ebc5bf4aeffc5cfddbd3be038c9a90fa"
+    sha256 = "506fea4620888a89d4d9a0c69fb90454a4a6a5245113d4fec184ace76406df6c"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/te.tar.gz"
 
 [th]
-git-tree-sha1 = "0b4e58019d18b2fb1751a0ab92a26bfc8aa2f03d"
+git-tree-sha1 = "9cbe57a4076a331f4dea3266487dbf96cda04c87"
 lazy = true
 
     [[th.download]]
-    sha256 = "94f03c613e890bc75813e235c7e79a72ed410d7643388ba0150064d5df9819f3"
+    sha256 = "6415a80152fffe127e8936635ccc6f7fcde0353f1e01449e7769e9b175b33024"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/th.tar.gz"
 
 [ti]
-git-tree-sha1 = "fb1b139b6f46549b9a54bca5fdf3fc0640e81300"
+git-tree-sha1 = "91f309d3959c07c66c0539e3d6a95dfbde780f25"
 lazy = true
 
     [[ti.download]]
-    sha256 = "f16c49df10f756ea5f3e98e3cb03f0faa5b264c905e12de123dec08e9c93dee5"
+    sha256 = "f6293bbbde545c0c3b96bd8482dcd96ba429d3b30dfc7f05527e4e7d62aff0a3"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/ti.tar.gz"
 
 [tl]
-git-tree-sha1 = "742f1b2c9a1c23b0d4935d7b106212fe955bd2b5"
+git-tree-sha1 = "37c3b67596eb9ed1248c49b6ec2453f28cd92f69"
 lazy = true
 
     [[tl.download]]
-    sha256 = "b72dc896392b4e1079402c17d9d1cd2b518ec9ce3fefbb7f1fff1d39777ffa9b"
+    sha256 = "3af7f6c52db26124d2ba07e07bcf64590ed0671fce1189c6b25f5ac8c1ec5f5a"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/tl.tar.gz"
 
 [tm]
-git-tree-sha1 = "f14e1326cf5e07cbd2670b64ebba72e03389e04a"
+git-tree-sha1 = "56f26b713266d44ae290666921c8fdf8ac25b7ed"
 lazy = true
 
     [[tm.download]]
-    sha256 = "bc9f76717eeeb1c645e16e2652b10ae08e5e848bfad10c827010ae77ab22c8ae"
+    sha256 = "3503ce783959613be72e66fc0c784e7519bc3bf26ba6503c2954392a00ff863e"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/tm.tar.gz"
 
 [u]
-git-tree-sha1 = "948707e3ed010d7361b0764f85af5f2d3e97edcd"
+git-tree-sha1 = "a8b40c89abeccfa5c1765bda362440aa285a7f25"
 lazy = true
 
     [[u.download]]
-    sha256 = "63c23b6656cdcb96f474f73c47fd5576ba432682a6a35c404eb6455555ac5a01"
+    sha256 = "01d8a8f67112dcc56c1efe355de1c23213250194eadff3f3ead7d6886066a9fc"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/u.tar.gz"
 
 [v]
-git-tree-sha1 = "6f20b43b8d0a7a2e4fe84e2a0288bc55f3d63365"
+git-tree-sha1 = "459e0f68c90cfa5008ee68d12e7f9dab0f62c444"
 lazy = true
 
     [[v.download]]
-    sha256 = "380f6d6e9c75c44b73ae18d6c4db37b32e5856b2aacd67b99bffc6bfca8132c4"
+    sha256 = "a730a5ffaa28d6e1940abe742194a0352482b6f8b0bc32dc8850b66731530834"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/v.tar.gz"
 
 [w]
-git-tree-sha1 = "7034b129dd5c476b5d8873269b088450c89efea1"
+git-tree-sha1 = "2b6abc0cc4c066ce04d5e3b1ebb229da8ccb4393"
 lazy = true
 
     [[w.download]]
-    sha256 = "d0125a19815fe1b63a0812b7812d9efc466208babb1fc0ec8a80c6729eb987c9"
+    sha256 = "8d3d90113930ee583b16657f21cb214162b318dba791d080582dbf569cfacf07"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/w.tar.gz"
 
 [xe]
-git-tree-sha1 = "55b4e9400761b339a2dae8ff0818fffc3dc42890"
+git-tree-sha1 = "b9d1d8cae30b5b7516184b9bc8a0420bbc516629"
 lazy = true
 
     [[xe.download]]
-    sha256 = "126581fd60dd3901fd432f8863c09322c0e51407b3618425087af094c7a6a7fe"
+    sha256 = "9c4ae42f99c13c5f97d72e3c2af9edb6800c0b2cb6156c3d8164d8cd98422ea9"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/xe.tar.gz"
 
 [y]
-git-tree-sha1 = "9dae9ad218f618714811e5a9ce2846a518ddf227"
+git-tree-sha1 = "029bb6cfba3e603103c58885a588a0854fc85bd7"
 lazy = true
 
     [[y.download]]
-    sha256 = "45bfd6a9a1dac3bd3ac725f1b6d18015c2cf76c4a098d5631e5c91a7ae69a643"
+    sha256 = "49046ba7a6e51cf8cc662b5e6afe1cd71a1b3020f79be41a120d4a89231b5bbd"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/y.tar.gz"
 
 [yb]
-git-tree-sha1 = "6d0a855017a144f9b47cfd03dc514243779c546f"
+git-tree-sha1 = "c748efba2be1cbecb61d81d91d4dcead45e163fd"
 lazy = true
 
     [[yb.download]]
-    sha256 = "d7734326bb2db59bbb2eb730549aaa38fe6acebfd4ed1921b5130858599a0b24"
+    sha256 = "d15fe795e370791aa1cb63bbb7354eb25a65888b58c0d5b291dd16f59e2014a8"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/yb.tar.gz"
 
 [zn]
-git-tree-sha1 = "787f1856a2496cc5acfef8a06de2b8446134c6a6"
+git-tree-sha1 = "bf19c24023ad8f339aa897cb6e3a260be9b1084e"
 lazy = true
 
     [[zn.download]]
-    sha256 = "2042dd4754391ea168ea0d4571293d20074431d5abe92df8b03fc120849e178c"
+    sha256 = "adaeaac4883747ab90dac07c98ae0b8634019ea54a96e355b86da9d36aaca36a"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/zn.tar.gz"
 
 [zr]
-git-tree-sha1 = "e5a8b6b0188a3a4534f74cdb713baa0f1dec3e37"
+git-tree-sha1 = "6e814b4d7664b7bd82a7e456e2e6a796fd4c5c29"
 lazy = true
 
     [[zr.download]]
-    sha256 = "9a3dd6a56ef2dc5945b6655d32f739c093fe09659cec87f9934eb7cc66846801"
+    sha256 = "d06bd7e20f4e9ce93806406d8b2431e46860f461b72163f1b47fc27c24ae0a24"
     url = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/zr.tar.gz"
