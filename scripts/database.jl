@@ -11,7 +11,7 @@ using UnifiedPseudopotentialFormat.PSlibrary: ELEMENTS, list_elements
 
 const ARTIFACT_TOML = joinpath(dirname(@__DIR__), "Artifacts.toml")
 const LIBRARY_URL_BASE = "http://pseudopotentials.quantum-espresso.org/legacy_tables/ps-library/"
-const UPF_URL_BASE = "http://pseudopotentials.quantum-espresso.org/upf_files"
+const UPF_URL_BASE = "http://pseudopotentials.quantum-espresso.org"
 const DATABASE_URL_BASE = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/"
 
 function getrawdata(element)
