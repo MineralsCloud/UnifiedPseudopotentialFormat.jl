@@ -10,12 +10,12 @@ using UnifiedPseudopotentialFormat: UPFFile, analyzename
 using UnifiedPseudopotentialFormat.PSlibrary: ELEMENTS, list_elements
 
 const ARTIFACT_TOML = joinpath(dirname(@__DIR__), "Artifacts.toml")
-const LIBRARY_URL_BASE = "https://www.quantum-espresso.org/pseudopotentials/ps-library/"
-const UPF_URL_BASE = "https://www.quantum-espresso.org"
+const LIBRARY_URL_BASE = "http://pseudopotentials.quantum-espresso.org/legacy_tables/ps-library/"
+const UPF_URL_BASE = "http://pseudopotentials.quantum-espresso.org/upf_files"
 const DATABASE_URL_BASE = "https://github.com/MineralsCloud/PseudopotentialArtifacts/raw/main/pslibrary/"
 
 function getrawdata(element)
-    url = LIBRARY_URL_BASE * element
+    url = LIBRARY_URL_BASE * lowercase(element)
     path = download(url)
     str = read(path, String)
     doc = parsehtml(str)
@@ -41,7 +41,7 @@ function makedb(element::String)
         src = String[],
         name = String[],
     )
-    for meta in getrawdata(lowercase(element))
+    for meta in getrawdata(element)
         info = analyzename(UPFFile(meta.name))
         push!(
             database,
