@@ -7,3 +7,4 @@
 [![Build Status](https://api.cirrus-ci.com/github/MineralsCloud/UnifiedPseudopotentialFormat.jl.svg)](https://cirrus-ci.com/github/MineralsCloud/UnifiedPseudopotentialFormat.jl)
 [![pipeline status](https://gitlab.com/singularitti/UnifiedPseudopotentialFormat.jl/badges/main/pipeline.svg)](https://gitlab.com/singularitti/UnifiedPseudopotentialFormat.jl/-/pipelines)
 [![Coverage](https://codecov.io/gh/MineralsCloud/UnifiedPseudopotentialFormat.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/MineralsCloud/UnifiedPseudopotentialFormat.jl)
+[![GitHub license](https://img.shields.io/github/license/MineralsCloud/UnifiedPseudopotentialFormat.jl)](https://github.com/MineralsCloud/UnifiedPseudopotentialFormat.jl/blob/main/LICENSE)
