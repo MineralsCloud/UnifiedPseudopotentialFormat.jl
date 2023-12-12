@@ -5,12 +5,13 @@ DocMeta.setdocmeta!(UnifiedPseudopotentialFormat, :DocTestSetup, :(using Unified
 
 makedocs(;
     modules=[UnifiedPseudopotentialFormat],
-    authors="Reno <singularitti@outlook.com>",
+    authors="singularitti <singularitti@outlook.com> and contributors",
     repo="https://github.com/MineralsCloud/UnifiedPseudopotentialFormat.jl/blob/{commit}{path}#{line}",
     sitename="UnifiedPseudopotentialFormat.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
         canonical="https://MineralsCloud.github.io/UnifiedPseudopotentialFormat.jl",
+        edit_link="main",
         assets=String[],
     ),
     pages=[
